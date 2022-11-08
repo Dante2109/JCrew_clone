@@ -1,0 +1,50 @@
+#box{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: 90%;
+    margin: auto;
+    margin-right: 25px;
+
+    
+}
+
+#box > div >img{
+    width: 100%;
+    
+   
+}
+#box>div{
+    padding-bottom: 20px;
+    height: auto;
+    width: 95%;
+    gap: 5px;
+    font-size: 20px;
+    text-align: left;
+    margin: auto;
+}
+#box>div p{
+    font-size: 12px;
+}
+
+#box>div>button{
+  font-size: 30px;
+  border-radius: 10px;
+}
+#btn{
+  font-size: 20px;
+}
+select{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+#bt{
+  font-size: 35px;
+  margin-left: 50%;
+}
+#head{
+    text-align: center;
+    font-size: 40px;
+}
+#box>div>p{
+ font-display: bold;
+}
