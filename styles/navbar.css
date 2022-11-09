@@ -1,0 +1,155 @@
+@font-face {
+    font-family: "soleil";
+    src: url(fonts/soleil/SoleilLight.otf);
+}
+
+@font-face {
+    font-family: "Bfp";
+    src: url(fonts/Frieght-big-pro/FreightBigProLight-Regular.ttf);
+}
+
+@font-face {
+    font-family: "soleilbold";
+    src: url(fonts/soleil/SoleilBold.otf);
+}
+
+@font-face {
+    font-family: "soleilregular";
+    src: url(fonts/soleil/SoleilRegular.otf);
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+#navbar{
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    padding: 10px ;
+    position: fixed;
+    top: 0;
+    align-items: center;
+    transition: 0.5s;
+    width: 100%;
+    z-index: 1;
+    border-bottom: 1px solid rgb(220, 216, 216);
+}
+#navbar2{
+    display: flex;
+    justify-content: space-around;
+    gap: 8px;
+    align-items: center;
+    position: relative;
+}
+#navbar2>p{
+    padding: 10px 20px;
+    border-radius: 3px;
+}
+#navbar2>a>img{
+    width:115px;
+    margin-left: 10px;
+}
+#navbar2>p:hover{
+    color:rgb(10, 10, 12);
+    cursor: pointer;
+}
+.sticky{
+    background-color: white; 
+    overflow: hidden;  
+    opacity: 1;
+
+}
+#navbar a{
+    text-decoration: none;
+    color: black;
+}
+/*  */
+.dropdown.active > .link,
+.link:hover{ 
+cursor: pointer;
+color:rgb(20, 20, 26);
+}
+.link{
+    padding: 2px 20px;
+    font-family: "soleilregular";
+}
+
+.dropdown-menu{
+    position: fixed;
+    background-color: white;
+    border: 1px transparent;
+    border-radius: 7px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    opacity: 0;
+    transform: translateY(-10%);
+    transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin: auto;
+    padding: 10px;
+}
+
+.dropdown.active >.link+.dropdown-menu{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+
+.free>p:hover{
+  color:rgb(21, 21, 29);
+}
+/* New Project */
+.Gifts{
+    padding: 30px;
+    width: 200px;
+}
+#navbar h5>a{
+    text-decoration: underline;
+}
+#navbar h5:hover{
+    text-decoration: underline;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    overflow-x: hidden;
+    font-family: "soleil";
+}
+#Women,#Men{
+ display: flex;
+ line-height: 5px;
+ margin: auto;   
+}
+#Women>div,#Men>div{
+    padding: 10px;
+}
+
+.pum_div{
+    padding: 10px;
+}
+
+.bold{
+    font-family: "soleilbold";
+}
+.BFP{
+    font-family: "Bfp";
+    margin-bottom: 30px;
+}
+.full{
+    left: 0px;
+    right: 0px;
+}
+.red{
+    color:red
+}
+.greyBold{
+    font-family:"soleilbold";
+    color:#b9b9b9
+}
