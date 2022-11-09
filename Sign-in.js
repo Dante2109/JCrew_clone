@@ -4,7 +4,7 @@ document.querySelector(".sign-in-area").innerHTML=LogIn();
 
 import SignUp from "./Auth-Component/createac.js";
 
-document.querySelector(".sign-Up-area").innerHTML=SignUp();
+document.querySelector(".sign-Up-Area").innerHTML=SignUp();
 
 
 
