@@ -9,6 +9,16 @@
 </head>
 <body>
     <p id="head">SHOP ALL MEN'S CLOTHING</p>
+    <select name="Featured" id="SortbyPrice" onchange="sortbyprice()">
+        <option value="Featured" >Featured</option>
+        <option value="Price:High to low">Price:High to low</option>
+        <option value="Price:Low to high">Price:Low to high</option>
+      </select>
+      <select name="SortbyName" id="SortbyName" onchange="namesort()">
+        <option value="Sort by Name" >Sort by Name</option>
+        <option value="Ascending">Ascending</option>
+        <option value="Descending">Descending</option>
+    </select>
     <div id="box">
     </div>
 
