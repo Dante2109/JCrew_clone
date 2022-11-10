@@ -464,11 +464,6 @@ const navbar=()=>{
    
     <div style="display:flex; justify-content:space-between; margin-right: 30px; width: 8%;">
         <p class="sign-In-click"><a href="login.html">Signin</a></p>
-        <div class="overlay"></div>
-        <div class="sign-in-area">
-        </div>
-        <div class="sign-Up-Area">
-        </div>
         <p><a href="cart.html">Cart</a></p>
     </div>
 </div>`
