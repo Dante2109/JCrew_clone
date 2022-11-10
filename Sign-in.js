@@ -16,6 +16,9 @@ document.querySelector(".sign-Up-Area").innerHTML=SignUp();
 document.querySelector(".overlay").addEventListener("click",()=>{
     removeSignInArea();
     removeSignUpArea();
+    document.querySelector(".sign-Up-Area").classList.remove("sign-Up-Area-height-extend");
+        document.querySelector(".selectcountryLabel").classList.remove("selectcountryLabel2");
+        document.querySelector(".test_cases_password").classList.remove("test_cases_password2");
 })
 
 
@@ -75,7 +78,9 @@ const showSignUpArea=()=>{
 
        
         document.querySelector(".sign-Up-Area").classList.remove("showSignUpArea");
-    
+        document.querySelector(".sign-Up-Area").classList.remove("sign-Up-Area-height-extend");
+        document.querySelector(".selectcountryLabel").classList.remove("selectcountryLabel2");
+        document.querySelector(".test_cases_password").classList.remove("test_cases_password2");
     
     }
 
@@ -339,6 +344,7 @@ function charCheckRes(password)
     {
         if(input.includes(ele)){
             return true;
+            
         }
     }
     return false;
@@ -393,23 +399,29 @@ function numberFound(password){
     }
     let country=document.querySelector(".selectcountry").value;
     let arr=JSON.parse(localStorage.getItem("userCredentials"))||[];
+
+    if(arr.length!==0){
+       for(let ele of arr)
+         {
+            if(ele.email==email){
+                alert("User Already Exists with this email id");
+                return;
+            }
+         }
+   
+
+    }
+
         let obj={email,password,country,secKey};
     arr.push(obj);
    localStorage.setItem("userCredentials",JSON.stringify(arr));
 
-     const doDelay=()=>{
         document.querySelector(".sign-Up-Area").classList.remove("sign-Up-Area-height-extend");
         document.querySelector(".selectcountryLabel").classList.remove("selectcountryLabel2");
         document.querySelector(".test_cases_password").classList.remove("test_cases_password2");
-     }
 
-
-      setTimeout(doDelay,2000)
-
-  setTimeout(removeSignInArea,3000);
-  setTimeout(removeSignUpArea,3000);
-    //   removeSignUpArea();
-    //   removeSignInArea();
+      removeSignUpArea();
+      removeSignInArea();
      }
      }
 
@@ -485,12 +497,12 @@ let forgotPassword=()=>{
                         alert("Password length is more than 20"+"\n"+"Couldn't update");
                         return false;
                     }
-                 else   if((!numberFound(newPassword) && !capitalCheck(newPassword) && !charCheckRes(newPassword) && !numberFound(newPassword))){
+                 else   if((!numberFound(newPassword) && !capitalCheck(newPassword) && charCheckRes(newPassword) && !numberFound(newPassword))){
                         alert("Password is weak!,Couldn't update");
-                        alert("o");
-                        return;
+                        
+                        return false;
                     } 
-                 else   {
+                 else  if(numberFound(newPassword) && capitalCheck(newPassword)  && numberFound(newPassword))  {
                             changePassWord(newPassword,email,Security,arr);//changePassword==============================================
                           
                        }
@@ -546,7 +558,8 @@ function changePassWord(newpassword,Inputemail,Security,arr)
       if(el.email==Inputemail && el.secKey==Security)
       {
         el.password=newpassword;
-
+        alert(`Hi ${el.email} Your Password Has updated`);
+         break;
       }
   }
 
