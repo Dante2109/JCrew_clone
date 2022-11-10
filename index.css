@@ -1,0 +1,618 @@
+* {
+    padding: 0px;
+    margin: 0px;    
+}
+
+#nav {
+    height: 60px;
+}
+
+#sec1 {
+    height: 72px;
+    width: 95%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+#sec1 > p {
+    font-size: 12px;
+    line-height: 14px;
+    color: #000000;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#hero {
+    height: 700px;
+    background-image: url("https://www.jcrew.com/brand_creative/homepage2022/12-Dec/2022dec_1108_hp_w_img0.jpg");
+    background-position: center-center;
+    background-size: cover;
+    margin-bottom: 40px;
+}
+
+#heroInner { 
+    height: 700px;
+    background-color: #0000005d;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #ffffff;
+}
+
+#heroInner > h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 64px;
+    line-height: 58px;
+    font-weight: 300;
+    color: #ffffff;
+}
+
+#heroInner > p {
+    font-family: sans-serif;
+    font-size: 18px;
+    line-height: 14px;
+    font-weight: 400;
+    color: #ffffff;
+    margin-top: 30px;
+}
+
+#heroInner > button {
+    border: none;
+    background: none;
+    margin-top: 50px;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 400;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+#sec2 { 
+    height: 300px;
+    background-image: url("https://www.jcrew.com/brand_creative/homepage2022/12-Dec/2022dec_1108_hp_w_gg_img0.jpg");
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 30px;
+}
+
+#sec2Inner { 
+    height: 300px;
+    background-color: #0000005d;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+#sec2Inner > h1 { 
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 48px;
+    font-weight: 200;
+    line-height: 42px;
+}
+
+#sec2Inner > p { 
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 10px;
+    font-weight: 400;
+}
+
+#sec2Btn { 
+    width: 70%;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+
+#sec2Btn >button { 
+    cursor: pointer;
+    border: 1px solid #ffffff;
+    background-color: #ffffff;
+    padding: 5px 45px;
+    font-family: sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 1px;
+}
+
+#sec3 {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3,700px);
+    width: 80%;
+    margin: auto;
+    margin-bottom: 60px;
+    color: #ffffff;
+}
+
+#sec3 > div:nth-child(1) {
+    background-image: url("https://www.jcrew.com/brand_creative/homepage2022/12-Dec/2022dec_1108_hp_w_img1.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    padding-top: 550px;
+    gap: 20px;
+}
+
+#sec3 > div:nth-child(2) {
+    background-image: url("https://www.jcrew.com/brand_creative/homepage2022/12-Dec/2022dec_1108_hp_w_img2.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    padding-top: 550px;
+    gap: 20px;
+}
+
+#sec3 > div:nth-child(3) {
+    background-image: url("https://www.jcrew.com/brand_creative/homepage2022/12-Dec/2022dec_1108_hp_w_img3.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    padding-top: 550px;
+    gap: 20px;
+}
+
+#sec3 > div:nth-child(4) {
+    background-image: url("https://www.jcrew.com/brand_creative/homepage2022/12-Dec/2022dec_1108_hp_w_img4.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    padding-top: 550px;
+    gap: 20px;
+    color: #000000;
+}
+
+#sec3 > div:nth-child(5) {
+    background-image: url("https://www.jcrew.com/brand_creative/homepage2022/12-Dec/2022dec_1108_hp_w_img5.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    padding-top: 550px;
+    gap: 20px;
+}
+
+#sec3 > div:nth-child(6) {
+    background-image: url("https://www.jcrew.com/brand_creative/homepage2022/12-Dec/2022dec_1108_hp_w_img6.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    padding-top: 550px;
+    gap: 20px;
+}
+
+#sec3 > div > h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 60px;
+    letter-spacing: 2px;
+}
+
+#sec3 > div > p { 
+    cursor: pointer;
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 400px;
+}
+
+#sec4 {
+    height: 485px;
+    background-image: url("https://www.jcrew.com/brand_creative/homepage2022/09-Sep/2022sep_0816_hp_w_lkbk_img0b.jpg");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+#sec4 > div:nth-child(3) {
+    width: 25%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#sec4 > div > h1 { 
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 54px;
+    font-weight: 200;
+    
+}
+
+#sec4 > div > p {
+    cursor: pointer;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    margin-top: 10px;
+}
+
+#sec5 {
+    height: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+}
+
+#sec5 > h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+    color: #000000;
+    line-height: 36px;
+    font-size: 36px;
+
+}
+
+#btnDiv {
+    width: 40%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 20px;
+}
+
+#btnDiv > button {
+    cursor: pointer;
+    border: 1px solid black;
+    padding: 10px 30px;
+    font-family: sans-serif;
+    font-weight: 700;
+    line-height: 22px;
+    font-size: 14px;
+    background-color: #ffffff;
+}
+
+#btnDiv > button:hover {
+    background-color: #666666;
+    color: #ffffff;
+    border: 1px solid #666666;
+}
+
+#sec6 {
+    height: 400px;
+    background-color: #f8f5f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#box { 
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    height: 250px;
+    margin-bottom: 50px;
+}
+
+#box > div {
+    display: flex;
+}
+
+#box > div:nth-child(1) {
+    background-image: url("https://www.jcrew.com/brand_creative/2022/202204-Apr/logo_jcrew_collective_20220315_blk.png?imformat=generic");
+    background-size: contain;
+    background-position: left;
+    background-repeat: no-repeat;
+}
+
+#box > div:nth-child(2) {
+    align-items: flex-end;
+    justify-content: end;
+}
+
+#box > div + div > p {
+    font-weight: 700;
+    line-height: 16px;
+    font-size: 16px;
+    color: #000000;
+    font-family: sans-serif;
+    cursor: pointer;
+}
+
+#sec7B { 
+    background-color: #f8f5f0;
+    padding-bottom: 50px;
+}
+
+
+#sec7 {
+    background-color: #f8f5f0;
+    width: 75%;
+    height: 700px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+#sec7 > div {
+    height: 480px;
+}
+
+#sec7 > div > img {
+    width: 100%;
+    height: 100%;
+}
+
+#s7C {
+    margin-top: 25px;
+}
+
+#s7C > h3 {
+    font-family: poppins;
+    font-weight: 300;
+    line-height: 18px;
+    font-size: 18px;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+#s7C > h1 { 
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+    line-height: 40px;
+    font-size: 36px;
+    color: #000000;
+    padding-bottom: 18px;
+}
+
+#s7C > h4 {
+    cursor: pointer;
+    font-family: sans-serif;
+    font-weight: 700;
+    line-height: 27px;
+    font-size: 14px;
+    color: #000000;
+}
+
+#sec8B { 
+    background-color: #f8f5f0;
+}
+
+#sec8 { 
+    margin: auto;
+    width: 75%;
+    background-color: #f8f5f0;
+}
+
+#picGrid { 
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 25px;
+}
+
+#picGrid > div > img { 
+    width: 100%;
+}
+
+#sec8 > h1{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+    color: #000000;
+    line-height: 60px;
+    font-size: 60px;
+    margin-bottom: 25px;
+}
+
+#s8C > h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+    line-height: 29px;
+    font-size: 24px;
+    color: #000000;
+    margin-top: 10px;
+}
+
+#s8C > h3 {
+    font-family: sans-serif;
+    font-weight: 700;
+    line-height: 27px;
+    color: #000000;
+    font-size: 14px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+#sec9 {
+    height: 400px;
+}
+
+#head { 
+    width: 75%;
+    margin: auto;
+    text-align: center;
+}
+
+#head > h1 { 
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 36px;
+    color: #000000;
+    padding: 20px;
+}
+
+#loveGrid {
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+#loveGrid > div { 
+    display: flex;
+}
+
+#loveGrid > div > img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.fa-heart{
+    font-size: 20px;
+    margin-left: -35px;
+    margin-top: 10px;
+}
+
+#sec10 {
+    text-align: center;
+    height: 500px;
+    margin-bottom: 25px;
+}
+
+#sec10 > h1{ 
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 47px;
+    color: #000000;
+}
+
+#sec10 > h2 {
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+}
+
+#instaGrid { 
+    height: 400px;
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 25px;
+
+}
+
+#instaGrid > div {
+    margin-top: 25px;
+    cursor: pointer;
+}
+
+#instaGrid > div:nth-child(1) {
+    background-image: url("https://edge.curalate.com/v1/img/-fiPV1S5--nUEPigWtD34O22Pg66vHuKFLbo8pMJuqs=/w/450?typ=webp");
+    background-position: center;
+    background-size: cover;
+}
+
+#instaGrid > div:nth-child(2) {
+    background-image: url("https://edge.curalate.com/v1/img/AmAntO6hb1v7IkbpcR_CIuKW9LXQxeEbds0rxOGNyUw=/w/450?typ=webp");
+    background-position: center;
+    background-size: cover;
+}
+
+#instaGrid > div:nth-child(3) {
+    background-image: url("https://edge.curalate.com/v1/img/LxSOPN9_ltVTw4_KBdKX1jaYlHmw6-wlQHNLEe_9jtc=/w/450?typ=webp");
+    background-position: center;
+    background-size: cover;
+}
+
+#instaGrid > div:nth-child(4) {
+    background-image: url("https://edge.curalate.com/v1/img/xWMlu7sBl3iKGqe4DvNyqpc6WZE4f99rEJ--GsHiAfc=/w/450?typ=webp");
+    background-position: center;
+    background-size: cover;
+}
+
+#sec11 { 
+    text-align: center;
+}
+
+#sec11 > h2{ 
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+    line-height: 36px;
+    color: #000000;
+    font-size: 36px;
+}
+
+#moreGrid { 
+    height: 300px;
+    width: 95%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap: 20px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+#moreGrid > div { 
+    cursor: pointer;
+}
+
+#moreGrid > div > img { 
+    width: 100%;
+}
+
+#moreGrid > div > h3  {
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 21px;
+    color: #000000;
+    margin-top: 5px;
+}
+
+#sec12 { 
+    border: 1px solid #e1e1e1;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+}
+
+#scIcons { 
+    height: 35px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#scIcons > div { 
+    width: 16%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;  
+}
+
+#scIcons > div > p {
+    font-family: sans-serif;
+    font-size: 13px;
+    line-height: 26px;
+    color: #000000;
+    font-weight: 500;
+}
