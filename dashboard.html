@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="./styles/admin_login.css">
+</head>
+<body>
+    <div id="admin-navbar">
+        <div><img src="https://searchlogovector.com/wp-content/uploads/2021/11/jcrew-logo-vector.png" alt=""></div>
+        <div>Admin Panel</div>
+        <div class="inline">
+            <div>
+                <input id="selectMen" type="submit" value="Men">
+                <input id="selectWomen" type="submit" value="Women">
+            </div>
+            <button id="admin-logout">Logout</button>
+        </div>
+    </div>
+    <div id="main">
+      <div id="left">
+        <!-- form here -->
+        <h2>Add Product</h2>
+        <input type="text" id="name" placeholder="Product Name">
+        <input type="number" id="price" placeholder="Product Price">
+        <input type="text" id="description" placeholder="Product Description">
+        <span>Estimate Delivery:</span>
+        <input type="date" id="discount">
+        <input type="url" id="image" placeholder="Product Image URL">
+
+        <span>Category:</span>
+        <select name="" id="category">
+            <option value="men">men</option>
+            <option value="women">women</option>
+        </select>
+
+        <button id="add_product">Add Product</button>
+      </div>
+      <div id="admin-container"></div>
+    </div>
+</body>
+</html>
+<script src="./scripts/dashboard.js"></script>
