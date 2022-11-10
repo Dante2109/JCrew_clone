@@ -1,21 +1,21 @@
 @font-face {
     font-family: "soleil";
-    src: url(fonts/soleil/SoleilLight.otf);
+    src: url(./Components/fonts/soleil/SoleilLight.otf);
 }
 
 @font-face {
     font-family: "Bfp";
-    src: url(fonts/Frieght-big-pro/FreightBigProLight-Regular.ttf);
+    src: url(./Components/fonts/Frieght-big-pro/FreightBigProLight-Regular.ttf);
 }
 
 @font-face {
     font-family: "soleilbold";
-    src: url(fonts/soleil/SoleilBold.otf);
+    src: url(./Components/fonts/soleil/SoleilBold.otf);
 }
 
 @font-face {
     font-family: "soleilregular";
-    src: url(fonts/soleil/SoleilRegular.otf);
+    src: url(./Components/fonts/soleil/SoleilRegular.otf);
 }
 
 a{
