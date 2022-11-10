@@ -103,7 +103,7 @@ color:rgb(20, 20, 26);
 .free>p:hover{
   color:rgb(21, 21, 29);
 }
-/* New Project */
+/*  */
 .Gifts{
     padding: 30px;
     width: 200px;
@@ -152,4 +152,66 @@ body{
 .greyBold{
     font-family:"soleilbold";
     color:#b9b9b9
+}
+/* Footer Section */
+
+#footer-1{
+    display: flex;
+    text-align: left;
+}
+#footer-1>div{
+    padding: 50px;
+}
+#footer-1>div p{
+ font-size: 14px;
+ line-height: 18px;
+ margin-top: -5px;
+}
+#footer>#footer-1 .less-l>p{
+    line-height: 20px;
+}
+#footer-1>div>h4{
+    font-size: 15px;
+}
+.footer-2{
+    padding: 50px;
+    text-align: left;
+}
+
+.pad{
+    padding: 10px;
+}
+.einput{
+    width: 280px;
+}
+.blackb{
+    font-family: "soleilbold";
+    margin-left: -5px;
+    border: 3px solid black;
+}
+
+/* <!--1st section ended  -->
+<!-- 2nd table section started --> */
+
+#footer-last{
+    width: 75%;
+    text-align: left;
+    justify-content: space-between;
+    align-items: top;
+    margin:auto;
+    margin-left: 50px;
+    line-height: 10px;
+    margin-bottom: 50px;
+
+}
+#fl1>a>i{
+    font-size: 30px;
+    margin-right: 25px;
+    color: black;
+}
+#footer{
+    color: black;
+    background-color: #f0f1f2;
+    margin-top: 100px;
+    margin-bottom: 0px;
 }
