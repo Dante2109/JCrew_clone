@@ -79,12 +79,12 @@ const showSignUpArea=()=>{
     
     }
 
- //calling back sign In from sign Up with pop up==========================================================
+ //calling back sign In from sign Up with pop up=======================================================================================
  document.querySelector(".signuplinkbtn2").addEventListener("click",()=>{
 
     removeSignUpArea();
     removeSignInArea();
-    setTimeout(showSignInArea,1000);  
+    setTimeout(showSignInArea,700);  
     
 
  })
@@ -240,7 +240,7 @@ document.querySelector(".test_cases_password").classList.add("test_cases_passwor
 
 
 
-// PassWord Validation/////////////////////////////////////////////////////////////////////////////////////////////////
+// PassWord Validation display/////////////////////////////////////////////////////////////////////////////////////////////////
  document.querySelector(".showSignupPass").addEventListener("input",()=>{ passwordValidate(); });
 
 
@@ -332,7 +332,8 @@ function capitalCheck(str)
 function charCheckRes(password)
 {  
     let input=password;
-    input.split(" ");
+  input= input.split("");
+    
     let check="<>&";
     for(let ele of check)
     {
@@ -424,7 +425,7 @@ const userSignIn=()=>{
    credentialCheck(inputemail,inputpassword,arr)
    
 }
-
+//email and password verification for logIn=======================================================================
 var credentialCheck=(inputemail,inputpassword,arr)=>{
     for(let {email,password} of arr)
     {
@@ -452,11 +453,16 @@ document.querySelector(".forgotPassword").addEventListener("click",()=>{
 let forgotPassword=()=>{
     let arr=JSON.parse(localStorage.getItem("userCredentials"))||[];
      let email=prompt("Type Your Email Address");
-     
-   if(email=="")
+    
+   if(email==undefined)
+      {
+        return false;
+      }
+
+ else  if(email=="")
     {
         alert("You didn't give input"+"\n"+"Try Again Later");
-        return;
+        return false;
     }
     if(email!="")
     {
@@ -465,29 +471,41 @@ let forgotPassword=()=>{
         {
             let Security=prompt("Type Your Security Key"+"\n"+"Who is favourite character");
             if(checkEmailSeckey(email,Security,arr)){
-                   let newPassword=prompt("Type Your Password");
-                   if(newPassword==""){
+                   let newPassword=prompt("Type Your New Password");
+                   if(newPassword==undefined){
                     alert("You Didn't Fill Input"+"\n"+"Try Again Later");
                     return;
                    }
-                   if(password!=""){
-                    if((password.length<8||password.length>20 && !numberFound(password) && !capitalCheck(password) && !charCheckRes(password))){
-                        alert("Password is weak!,Couldn't create an account");
+                 else  if(newPassword!=undefined){
+                    if(newPassword.length<8){
+                        alert("Password length is less than 8"+"\n"+"Couldn't update");
+                        return false;
+                    }
+                else  if(newPassword.length>20){
+                        alert("Password length is more than 20"+"\n"+"Couldn't update");
+                        return false;
+                    }
+                 else   if((!numberFound(newPassword) && !capitalCheck(newPassword) && !charCheckRes(newPassword) && !numberFound(newPassword))){
+                        alert("Password is weak!,Couldn't update");
+                        alert("o");
                         return;
                     } 
+                 else   {
+                            changePassWord(newPassword,email,Security,arr);//changePassword==============================================
+                          
+                       }
                    }
-                   if((password.length>=8 && password.length<=20 && numberFound(password) && capitalCheck(password) && charCheckRes(password))){
-                       changePassWord(password,email,Security,arr);//changePassword==============================================
-                   }
+               
             }
         }
-     if(!forgotPasswordEmailchecking(arr,email)){
-        return;
-     }
+    //  if(!forgotPasswordEmailchecking(arr,email)){
+    //     return;
+    //  }
     }
 
 
 }
+//Forget password email checking function=================================================================================
 let forgotPasswordEmailchecking=(arr,inputemail)=>{
     for(let {email} of arr)
     {
@@ -499,7 +517,7 @@ let forgotPasswordEmailchecking=(arr,inputemail)=>{
     alert("User Doesn't Exist");
     return false;
 }
-
+//Forget Password Security Key Checking Function=============================================================================
 let checkEmailSeckey=(inputemail,inputSecurity,arr)=>{
    
     for(let {email,secKey} of arr)
@@ -519,7 +537,7 @@ let checkEmailSeckey=(inputemail,inputSecurity,arr)=>{
 
 
 }
-
+//Create New Password In Forget Password Function=================================================================================
 
 function changePassWord(newpassword,Inputemail,Security,arr)
 {
@@ -528,6 +546,10 @@ function changePassWord(newpassword,Inputemail,Security,arr)
       if(el.email==Inputemail && el.secKey==Security)
       {
         el.password=newpassword;
+
       }
   }
+
+  localStorage.setItem("userCredentials",JSON.stringify(arr));
+
 }
