@@ -54,7 +54,6 @@ z-index: 4;
 
 
 
-
 .field{
     width: 330px;
     height: 42px;
@@ -132,7 +131,6 @@ cursor: pointer;
 .terms{
     margin: 20px;
     margin-top: 5px;
-    
     font-family: soleil, Helvetica, Arial, sans-serif;
     font-style: normal;
     font-weight:400;
@@ -140,9 +138,7 @@ cursor: pointer;
     line-height: 16px;
     color: #767676;
 }
-a{
-    color: #767676;
-}
+
 hr{
     margin: 20px;
     width: 333px;
@@ -256,7 +252,7 @@ transition: 2s;
     color: #000000;
 }
 #country{
-    margin-left: 20px;
+    margin-left: 3px;
     width: 338px;
     height: 44px;
     font-family: soleil, Helvetica, Arial, sans-serif;
@@ -267,6 +263,7 @@ transition: 2s;
     color: #000000;
     padding-left: 3px;
     padding-top: 5px;
+    border: 1px solid gray;
 }
 .showOutLine{
     border:2px solid black
