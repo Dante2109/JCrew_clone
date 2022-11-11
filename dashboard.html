@@ -10,35 +10,58 @@
 <body>
     <div id="admin-navbar">
         <div><img src="https://searchlogovector.com/wp-content/uploads/2021/11/jcrew-logo-vector.png" alt=""></div>
-        <div>Admin Panel</div>
+        <h3>Admin Panel</h3>
         <div class="inline">
-            <div>
-                <input id="selectMen" type="submit" value="Men">
-                <input id="selectWomen" type="submit" value="Women">
-            </div>
-            <button id="admin-logout">Logout</button>
+            <input id="selectMen" type="submit" value="Men">
+            <input id="selectWomen" type="submit" value="Women">
         </div>
     </div>
     <div id="main">
       <div id="left">
         <!-- form here -->
-        <h2>Add Product</h2>
+        <h4>Add Product</h4>
         <input type="text" id="name" placeholder="Product Name">
         <input type="number" id="price" placeholder="Product Price">
-        <input type="text" id="description" placeholder="Product Description">
-        <span>Estimate Delivery:</span>
-        <input type="date" id="discount">
         <input type="url" id="image" placeholder="Product Image URL">
-
+        <input type="number" id="quantity" placeholder="Total Quantity">
+        <input type="text" id="description" placeholder="Product Description">
         <span>Category:</span>
         <select name="" id="category">
+            <option value="sweater">Sweater</option>
+            <option value="jacket">Jacket</option>
+            <option value="pant">Pant</option>
+            <option value="shirt">Shirt</option>
+            <option value="tshirt">T-Shirt</option>
+        </select>
+        <span>Release Date:</span>
+        <input type="date" id="rDate">
+
+        <span>Section:</span>
+        <select name="" id="section">
             <option value="men">men</option>
             <option value="women">women</option>
         </select>
 
         <button id="add_product">Add Product</button>
       </div>
-      <div id="admin-container"></div>
+      <!-- <div id="admin-container"></div> -->
+      <table>
+        <thead>
+          <tr>
+            <th class="big">Image</th>
+            <th class="big">Name</th>
+            <th>Price</th>
+            <th>Release Date</th>
+            <th>Total Quantity</th>
+            <th>Remove</th>
+            <th>Update Price</th>
+            <th class="big overflow">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Append table rows here  -->
+        </tbody>
+      </table>
     </div>
 </body>
 </html>

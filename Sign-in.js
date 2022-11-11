@@ -8,8 +8,17 @@ import SignUp from "./Auth-Component/createac.js";
 
 document.querySelector(".sign-Up-Area").innerHTML=SignUp();
 
+import AdminLogin from "./Auth-Component/admin_login_component.js";
+document.querySelector(".admin-login").innerHTML=AdminLogin();
 
 
+const showform = () => {
+    document.querySelector(".admin-login").classList.add("show-form")
+    document.querySelector(".overlay").classList.add("show-popup")
+}
+document.querySelector(".adminlogin").addEventListener("click",()=>{
+    showform();
+})
 
 //pop up====================================================================================================
 //pop signIn
@@ -257,7 +266,7 @@ let password = document.querySelector(".showSignupPass").value;
         document.querySelector("#length").innerHTML="<span class='tc1'>&#10003;</span> Between 8 and 20 characters";
         document.querySelector(".tc1").style.color="teal";
  }
-  if(password.length<8)
+  if(password.length<8||password.length>20)
 {
     document.querySelector("#length").innerHTML="<span class='tc1'>&#9747;</span>Between 8 and 20 characters" ;
     document.querySelector(".tc1").style.color="red";
@@ -389,7 +398,7 @@ function numberFound(password){
     let secKey=prompt("It will be your Security Key"+"\n"+"If you forget your password"+"\n"+"Who is your favourite charecter?");
     if(secKey==""){
       alert("You should type a seckey to proceed");
-      secKey=prompt("It will be your Security Key"+"\n"+"If you forget your password"+"\n"+"Who is your favourite charecter?");
+      secKey=prompt("It will be your Security Key to recover your account"+"\n"+"If you forget your password"+"\n"+"Who is your favourite charecter?");
     if(secKey==""){
         alert("Sorry User,you are not following the process"+"\n"+"Try again later");
         document.querySelector(".signupemail").value="";
@@ -412,17 +421,21 @@ function numberFound(password){
 
     }
 
-        let obj={email,password,country,secKey};
+        let obj={email,password,country,secKey};//Successful Signup==================================================
     arr.push(obj);
    localStorage.setItem("userCredentials",JSON.stringify(arr));
-
+   localStorage.setItem('loggedInstatus',JSON.stringify(loggedInstatus));
         document.querySelector(".sign-Up-Area").classList.remove("sign-Up-Area-height-extend");
         document.querySelector(".selectcountryLabel").classList.remove("selectcountryLabel2");
         document.querySelector(".test_cases_password").classList.remove("test_cases_password2");
 
-      removeSignUpArea();
-      removeSignInArea();
+      // removeSignUpArea();
+      // removeSignInArea();
+     // showSignInArea();
+       // showSignInArea();
+         showSignInArea();
      }
+   
      }
 
      
@@ -444,6 +457,8 @@ var credentialCheck=(inputemail,inputpassword,arr)=>{
     if(inputemail==email && inputpassword==password)
     {
        alert("LogInSuccessFul");
+       let loggedInstatus=true;
+       localStorage.setItem('loggedInstatus',JSON.stringify(loggedInstatus));
        return true;
     }
    
@@ -566,3 +581,7 @@ function changePassWord(newpassword,Inputemail,Security,arr)
   localStorage.setItem("userCredentials",JSON.stringify(arr));
 
 }
+// let yoyo=()=>{
+//     console.log("chal ja bhootnike")
+// }
+export { removeSignInArea };

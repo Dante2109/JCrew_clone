@@ -1,46 +1,60 @@
+
 let menData = JSON.parse(localStorage.getItem("men")) || []
 let womenData = JSON.parse(localStorage.getItem("women")) || []
 
 
-let container = document.getElementById("admin-container")
-const append = (data) =>{
-    container.innerHTML=null
+let tbody = document.querySelector("tbody")
+const append = (data) => {
+    tbody.innerHTML=null
     data.forEach((el,i)=>{
-        let div = document.createElement("div")
-        div.setAttribute("class","card")
-        let image = document.createElement("img")
-        let name = document.createElement("h3")
-        let price = document.createElement("div")
-        let description = document.createElement("p")
+        let tr =document.createElement("tr")
 
-        image.src = el.image
-        name.innerText = el.name
-        price.innerHTML = el.price
-        description.innerText = el.description
+        let img =document.createElement("img")
+        img.src=el.image
+        let td1 = document.createElement("td")
+        td1.append(img)
 
-        let removeBtn = document.createElement("button")
-        removeBtn.innerText= "Remove"
-        removeBtn.setAttribute("class","remove_item")
-        removeBtn.addEventListener("click",()=>{
+        let td2 = document.createElement("td")
+        td2.innerText = el.name
+
+        let td3 = document.createElement("td")
+        td3.innerText = el.price
+
+        let td4 = document.createElement("td")
+        td4.innerText = el.rDate
+
+        let td5 = document.createElement("td")
+        td5.innerText = el.quantity
+
+        
+        let td6 = document.createElement("td")
+        td6.innerText = "Remove"
+        td6.setAttribute("class","red")
+        td6.addEventListener("click",()=>{
             removeData(data,i,el.type)
         })
-        let updateBtn = document.createElement("button")
-        updateBtn.innerText= "update"
-        updateBtn.setAttribute("class","update_item")
-        updateBtn.addEventListener("click",()=>{
+        let td7 = document.createElement("td")
+        td7.innerText = "Update-Price"
+        td7.setAttribute("class","green")
+        td7.addEventListener("click",()=>{
             updateData(data,i,el.type)
         })
-        div.append(image,name,price,description,removeBtn,updateBtn)
-        container.append(div)
         
+        let td8 = document.createElement("td")
+        td8.innerText = el.description
+        
+        tr.append(td1,td2,td3,td4,td5,td6,td7,td8)
+        tbody.append(tr)
     })
+
 }
+
 function removeData(data,index,type){
-   let NSData= data.filter((el,i)=>{
-    return i!=index
-   })
-    localStorage.setItem(type,JSON.stringify(NSData))
+    let NSData= data.filter((el,i)=>{
+        return i!=index
+    })
     append(NSData)
+    localStorage.setItem(type,JSON.stringify(NSData))
 }
 function updateData(data,i,type){
     const new_price = prompt( `Enter new price`)
@@ -50,22 +64,28 @@ function updateData(data,i,type){
 }
 
 
+
 let addProduct = document.getElementById("add_product")
 addProduct.onclick = () => {
+
+    let image = document.getElementById("image").value
     let name = document.getElementById("name").value
     let price = document.getElementById("price").value
+    let rDate = document.getElementById("rDate").value
+    let category = document.getElementById("category").value
+    let quantity = document.getElementById("quantity").value
+    let type = document.getElementById("section").value
     let description = document.getElementById("description").value
-    let discount = document.getElementById("discount").value
-    let image = document.getElementById("image").value
-    let type = document.getElementById("category").value
 
     let obj = {
+        image,
         name,
         price,
-        description,
-        discount,
-        image,
+        rDate,
+        category,
+        quantity,
         type,
+        description,
     }    
 
     if(type=="men"){
@@ -78,11 +98,12 @@ addProduct.onclick = () => {
         append(womenData)
     }    
 }    
-
+let mData = JSON.parse(localStorage.getItem("men")) || []
+let wData = JSON.parse(localStorage.getItem("women")) || []
 let selectMen = document.getElementById("selectMen").onclick=()=>{
-    append(menData)
+    append(mData)
 }
 
 let selectWomen = document.getElementById("selectWomen").onclick=()=>{
-    append(womenData)
+    append(wData)
 }
