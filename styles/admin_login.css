@@ -1,0 +1,158 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+.overlay{
+    width: 100%;
+    position: fixed;
+    top: 0%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.35);
+    opacity: 0;
+    z-index: -3;
+    transition: 1s;
+}
+.show-popup{
+    opacity: 1;
+    z-index: 1;
+}
+.admin-login{
+    width: 360px;
+    background-color: white;
+    padding: 40px 10px;
+    text-align: center;
+    position: absolute;
+    top: -50%; /* - because we want to hide form*/
+    left: 50%;
+    z-index: 5;
+    transform: translate(-50%, -50%);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: 2s;
+}
+.show-form{
+    top: 50%;
+}
+.admin-login>input{
+    width: 90%;
+    margin-bottom: 30px;
+    height: 42px;
+}
+a{
+    text-decoration: none;
+    color: rgb(1, 1, 185);
+}
+#submit{
+    background-color: black;
+    font-weight: 700;
+    font-size: 15px;
+    color: white;
+    width: 340px;
+    height: 42px;
+    cursor: pointer;
+}
+.coat{
+    color: gray;
+    font-size: 12px;
+}
+hr.grayline{
+    border-top: 1px solid rgb(202, 202, 202);
+}
+.admin-login span{
+    position: absolute;
+    right: 0px;
+    top: 5px;
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: 700;
+    width: 40px;
+}
+
+
+/* ****************************************** */
+#admin-navbar{
+    border-bottom: 1px solid rgb(189, 189, 189);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 30px;
+    padding-left: 50px;
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    z-index: 30; 
+    background-color: white;
+}
+#admin-navbar img{
+    width: 105px;
+}
+#admin-logout{
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    margin: 0px 100px 0px 30px;
+}
+.inline{
+    display: flex;
+}
+.inline input{
+    border: 1px solid black;
+    background-color: white;
+    padding: 12px 20px;
+}
+#main{
+    display: flex;
+}
+h2{
+    text-align: center;
+}
+#left{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 20%;
+    padding: 10px 20px;
+    height: 100%;
+    position: fixed;
+    z-index: 29; 
+    background-color: white;
+    overflow-x: hidden;
+}
+
+#left > input{
+    width: 250px;
+    margin: 10px;
+    height: 30px;
+}
+#category{
+    width: 96%;
+    margin: 5px;
+    height: 35px;
+}
+#left > button{
+    width: 96%;
+    margin: 15px 5px 5px 5px;
+    background-color: black;
+    color: white;
+    padding: 10px 0px;
+}
+#left span{
+    font-size: 12px;
+    font-weight: 700;
+}
+
+#admin-container{
+    margin-top: 100px;
+    width: 80%;
+    margin-left: 25%;
+    margin-right: 2%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+.card{
+    text-align: center;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 20px;
+}
+.card img{
+    width: 100%;
+    height: 50%;
+}

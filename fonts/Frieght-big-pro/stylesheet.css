@@ -1,0 +1,144 @@
+@font-face {
+    font-family: 'FreightBigProBook';
+    src: url('FreightBigProBook-Regular.eot');
+    src: local('☞FreightBig Pro Book'), local('FreightBigProBook-Regular'),
+        url('FreightBigProBook-Regular.eot?#iefix') format('embedded-opentype'),
+        url('FreightBigProBook-Regular.woff2') format('woff2'),
+        url('FreightBigProBook-Regular.woff') format('woff'),
+        url('FreightBigProBook-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FreightBigProBlack';
+    src: url('FreightBigProBlack-Regular.eot');
+    src: local('☞FreightBig Pro Black'), local('FreightBigProBlack-Regular'),
+        url('FreightBigProBlack-Regular.eot?#iefix') format('embedded-opentype'),
+        url('FreightBigProBlack-Regular.woff2') format('woff2'),
+        url('FreightBigProBlack-Regular.woff') format('woff'),
+        url('FreightBigProBlack-Regular.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FreightBigProMedium';
+    src: url('FreightBigProMedium-Italic.eot');
+    src: local('☞FreightBig Pro Medium Italic'), local('FreightBigProMedium-Italic'),
+        url('FreightBigProMedium-Italic.eot?#iefix') format('embedded-opentype'),
+        url('FreightBigProMedium-Italic.woff2') format('woff2'),
+        url('FreightBigProMedium-Italic.woff') format('woff'),
+        url('FreightBigProMedium-Italic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'FreightBigProLight';
+    src: url('FreightBigProLight-Regular.eot');
+    src: local('☞FreightBig Pro Light'), local('FreightBigProLight-Regular'),
+        url('FreightBigProLight-Regular.eot?#iefix') format('embedded-opentype'),
+        url('FreightBigProLight-Regular.woff2') format('woff2'),
+        url('FreightBigProLight-Regular.woff') format('woff'),
+        url('FreightBigProLight-Regular.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FreightBigProBold';
+    src: url('FreightBigProBold-Italic.eot');
+    src: local('☞FreightBig Pro Bold Italic'), local('FreightBigProBold-Italic'),
+        url('FreightBigProBold-Italic.eot?#iefix') format('embedded-opentype'),
+        url('FreightBigProBold-Italic.woff2') format('woff2'),
+        url('FreightBigProBold-Italic.woff') format('woff'),
+        url('FreightBigProBold-Italic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'FreightBigProBlack';
+    src: url('FreightBigProBlack-Italic.eot');
+    src: local('☞FreightBig Pro Black Italic'), local('FreightBigProBlack-Italic'),
+        url('FreightBigProBlack-Italic.eot?#iefix') format('embedded-opentype'),
+        url('FreightBigProBlack-Italic.woff2') format('woff2'),
+        url('FreightBigProBlack-Italic.woff') format('woff'),
+        url('FreightBigProBlack-Italic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'FreightBigProBold';
+    src: url('FreightBigProBold-Regular.eot');
+    src: local('☞FreightBig Pro Bold'), local('FreightBigProBold-Regular'),
+        url('FreightBigProBold-Regular.eot?#iefix') format('embedded-opentype'),
+        url('FreightBigProBold-Regular.woff2') format('woff2'),
+        url('FreightBigProBold-Regular.woff') format('woff'),
+        url('FreightBigProBold-Regular.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FreightBigProSemibold';
+    src: url('FreightBigProSemibold-Regular.eot');
+    src: local('☞FreightBig Pro Semibold'), local('FreightBigProSemibold-Regular'),
+        url('FreightBigProSemibold-Regular.eot?#iefix') format('embedded-opentype'),
+        url('FreightBigProSemibold-Regular.woff2') format('woff2'),
+        url('FreightBigProSemibold-Regular.woff') format('woff'),
+        url('FreightBigProSemibold-Regular.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FreightBigProMedium';
+    src: url('FreightBigProMedium-Regular.eot');
+    src: local('☞FreightBig Pro Medium'), local('FreightBigProMedium-Regular'),
+        url('FreightBigProMedium-Regular.eot?#iefix') format('embedded-opentype'),
+        url('FreightBigProMedium-Regular.woff2') format('woff2'),
+        url('FreightBigProMedium-Regular.woff') format('woff'),
+        url('FreightBigProMedium-Regular.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FreightBigProLight';
+    src: url('FreightBigProLight-Italic.eot');
+    src: local('☞FreightBig Pro Light Italic'), local('FreightBigProLight-Italic'),
+        url('FreightBigProLight-Italic.eot?#iefix') format('embedded-opentype'),
+        url('FreightBigProLight-Italic.woff2') format('woff2'),
+        url('FreightBigProLight-Italic.woff') format('woff'),
+        url('FreightBigProLight-Italic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'FreightBigProBook';
+    src: url('FreightBigProBook-Italic.eot');
+    src: local('☞FreightBig Pro Book Italic'), local('FreightBigProBook-Italic'),
+        url('FreightBigProBook-Italic.eot?#iefix') format('embedded-opentype'),
+        url('FreightBigProBook-Italic.woff2') format('woff2'),
+        url('FreightBigProBook-Italic.woff') format('woff'),
+        url('FreightBigProBook-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'FreightBigProSemibold';
+    src: url('FreightBigProSemibold-Italic.eot');
+    src: local('☞FreightBig Pro Semibold Italic'), local('FreightBigProSemibold-Italic'),
+        url('FreightBigProSemibold-Italic.eot?#iefix') format('embedded-opentype'),
+        url('FreightBigProSemibold-Italic.woff2') format('woff2'),
+        url('FreightBigProSemibold-Italic.woff') format('woff'),
+        url('FreightBigProSemibold-Italic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+}
+
