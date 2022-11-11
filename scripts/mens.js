@@ -1,3 +1,10 @@
+import { navbar,transitions } from "../Components/navbar.js";
+
+let navbar_div=document.getElementById("navbar");
+navbar_div.innerHTML=navbar(),transitions()
+
+
+
 var mensData = [
 
     {
@@ -7,6 +14,7 @@ var mensData = [
         color:"NEW COLOR",
         name: "Secret Wash cotton poplin shirt",
       price: 7699,
+      type:"men"
       
     },
     {
@@ -15,6 +23,7 @@ var mensData = [
         color:"NEW COLOR",
          name: "Secret Wash cotton poplin shirt",
         price: 9499,
+        type:"men"
     },
     {
       image_url:
@@ -22,14 +31,15 @@ var mensData = [
         color:"BEST SELLER",
         name: "mens Broken-in organic cotton oxford shirt",
         price: 7399,
+        type:"men"
     },
     {
       image_url:
         "https://www.jcrew.com/s7-img-facade/BE996_YD2386?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=480&hei=480",
-        color:"BEST SELLER",
         color:"NEW COLOR",
         name: "Broken-in henley",
         price: 2699,
+        type:"men"
 
     },
     {
@@ -38,6 +48,7 @@ var mensData = [
         color:"BEST SELLER",
         name: "screct wash organic cotton shirt",
       price: 6440,
+      type:"men"
     },
     {
       image_url:
@@ -46,6 +57,7 @@ var mensData = [
         color:"NEW COLOR",
          name: "Brushed twill shirt ",
        price: 10999,
+       type:"men",
    
     },
     {
@@ -54,6 +66,7 @@ var mensData = [
         color:"NEW COLOR",
        name: "Midweight fnnel work shirt",
       price: 7699,
+      type:"men"
  
     },
     {
@@ -62,6 +75,7 @@ var mensData = [
         color:"NEW COLOR",
         name: "Cotton cashmere shirt",
       price: 5299,
+      type:"men"
     },
       {
         image_url:
@@ -69,6 +83,7 @@ var mensData = [
           color:"NEW COLOR",
           name: "Ludlow topcoat in wool-cahhmere",
         price: 5299,
+        type:"men"
       },
       {
         image_url:
@@ -76,6 +91,7 @@ var mensData = [
           color:"NEW COLOR",
           name: "Broken-in henley",
         price: 4299,
+        type:"men"
       },
       {
         image_url:
@@ -83,6 +99,7 @@ var mensData = [
           color:"NEW COLOR",
           name: "mens Broken-in henley",
          price: 2699,
+         type:"men"
       },
       {
         image_url:
@@ -91,6 +108,7 @@ var mensData = [
           name: "mens Garment-dyed slub cotton polo shirt",
           
         price: 5299,
+        type:"men"
       },
       
   
@@ -98,6 +116,14 @@ var mensData = [
       
     
   ];
+  let div=document.getElementById("SortbyPrice")
+  div.addEventListener("change",sortbyprice)
+
+
+
+
+
+
     let menarr=JSON.parse(localStorage.getItem("clothes")) ||[];
     display(mensData)
 
