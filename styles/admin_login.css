@@ -2,6 +2,26 @@ body{
     margin: 0px;
     padding: 0px;
 }
+
+@font-face {
+    font-family: "soleil";
+    src: url(../fonts/soleil/SoleilLight.otf);
+}
+
+@font-face {
+    font-family: "Bfp";
+    src: url(../fonts/Frieght-big-pro/FreightBigProSemibold-Regular.woff);
+}
+
+@font-face {
+    font-family: "soleilBook";
+    src: url(../fonts/soleil/SoleilBook.otf);
+}
+
+@font-face {
+    font-family: "soleilregular";
+    src: url(../fonts/soleil/SoleilRegular.otf);
+}
 .overlay{
     width: 100%;
     position: fixed;
@@ -68,7 +88,7 @@ hr.grayline{
 }
 
 
-/* ****************************************** */
+/* ******************DASHBOARD************************ */
 #admin-navbar{
     border-bottom: 1px solid rgb(189, 189, 189);
     display: flex;
@@ -85,46 +105,58 @@ hr.grayline{
 #admin-navbar img{
     width: 105px;
 }
-#admin-logout{
-    padding: 10px 20px;
-    background-color: black;
-    color: white;
-    margin: 0px 100px 0px 30px;
-}
 .inline{
     display: flex;
+    margin-right: 100px;
 }
 .inline input{
+    font-family: "soleilBook";
     border: 1px solid black;
     background-color: white;
     padding: 12px 20px;
+    margin-right: 10px;
 }
 #main{
     display: flex;
 }
-h2{
+h4{
+    font-family: "soleil";
+    font-size: 20px;
     text-align: center;
+    margin-bottom: 0px;
+}
+h3{
+    font-family: "Bfp";
 }
 #left{
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     width: 20%;
-    padding: 10px 20px;
+    padding: 50px 20px 10px 20px;
     height: 100%;
     position: fixed;
     z-index: 29; 
     background-color: white;
     overflow-x: hidden;
 }
-
 #left > input{
+    font-family: "soleilBook";
+    color: gray;
     width: 250px;
     margin: 10px;
     height: 30px;
+    border: none;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
 }
-#category{
+#section, #category{
+    font-family: "soleilBook";
     width: 96%;
-    margin: 5px;
+    margin: 4px;
     height: 35px;
+    border: none;
+    color: gray;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
 }
 #left > button{
     width: 96%;
@@ -134,25 +166,56 @@ h2{
     padding: 10px 0px;
 }
 #left span{
+    font-family: "soleilBook";
     font-size: 12px;
-    font-weight: 700;
 }
+/* *******************Table************************ */
 
-#admin-container{
-    margin-top: 100px;
-    width: 80%;
-    margin-left: 25%;
-    margin-right: 2%;
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 20px;
+th{
+    font-family: "soleil";
+    font-size: 15px;
+    background-color: rgb(255, 175, 1);
+    padding: 10px 25px;
 }
-.card{
+.big{
+    width: 200px;
+}
+td{
+    font-family: "soleilregular";
+    font-size: 13px;
     text-align: center;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    padding: 20px;
 }
-.card img{
-    width: 100%;
-    height: 50%;
+table{
+    margin: auto;
+    margin: 60px 10px 0px 325px;
+}
+#filter{
+    background-color: black;
+    color: aliceblue;
+    font-size: large;
+    font-weight: 500;
+    padding: 10px;
+    margin: 20px 0px 0px 100px;
+}
+tr img{
+    width: 100px;
+    height: 120px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+hr{
+    border-top: 1px solid rgb(255, 0, 0);
+}
+.red{
+    color: red;
+    background-color: rgb(255, 236, 236);
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.green{
+    color: rgb(0, 110, 0);
+    background-color: rgb(226, 255, 226);
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    font-weight: 700;
+    cursor: pointer;
 }
