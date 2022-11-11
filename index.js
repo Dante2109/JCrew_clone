@@ -1,7 +1,7 @@
-import{navbar,transitions} from "../enormous-step-3337/Components/navbar.js"
+import{navbar,transitions} from "./Components/navbar.js"
 document.getElementById("navbar").innerHTML = navbar();
 
-import footer from "../enormous-step-3337/Components/footer.js"
+import footer from "./Components/footer.js"
 document.getElementById("footer").innerHTML = footer();
 
 transitions();

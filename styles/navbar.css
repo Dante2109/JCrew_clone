@@ -125,7 +125,7 @@ body{
 }
 #Women,#Men{
  display: flex;
- line-height: 25px;
+ line-height: 5px;
  margin: auto;   
 }
 #Women>div,#Men>div{
