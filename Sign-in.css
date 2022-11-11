@@ -84,12 +84,14 @@ width: 49px;
 background-color: white;
 border: none;
 border-left:1px solid gray;
+
 }
-.eye{
+.eye,.eye2{
     height: 25px;
     display: flex;
   margin: auto;
   margin-top: 11px;
+  cursor: pointer;
 }
 .bottom-password{
     display: flex;
@@ -126,11 +128,7 @@ cursor: pointer;
     height: 42px;
     cursor: pointer;
 }
-input::placeholder{
-    position: fixed;
-   top: 4%;
-   left: 2%;
-}
+
 .terms{
     margin: 20px;
     margin-top: 5px;
@@ -161,7 +159,7 @@ hr{
     font-size: 14px;
     font-weight: 700;
 }
-.signuplinkbtn
+.signuplinkbtn,.signuplinkbtn2
 {
 
     color:#0163ff ;
@@ -193,11 +191,40 @@ hr{
     cursor: pointer;
 }
 
+.password_label{
+     position: absolute;
+    top: 132px;
+    left: 18px;
+    padding-left: 9px;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: .3px;
+    color: #767676;
+    pointer-events: none;
+}
+
+.email_label{
+position: absolute;
+    top: 67px;
+    left: 18px;
+    padding-left: 9px;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: .3px;
+    color: #767676;
+    pointer-events: none;
+
+
+}
+
+
+
 
 /* ------------------------Sign-Up-Area------------------ */
 .sign-Up-Area{
 width: 375px;
 height: 555px;
+
 background-color: white;
 padding-top: 5px;
 padding-right: 5px;
@@ -208,6 +235,12 @@ left: 50%;
 box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 transition: 2s; 
 }
+.sign-Up-Area-height-extend{
+    height: 675px;
+}
+
+
+
 .form-SignUp{
     width: 100%;
     
@@ -235,8 +268,11 @@ transition: 2s;
     padding-left: 3px;
     padding-top: 5px;
 }
-
+.showOutLine{
+    border:2px solid black
+}
 .test_cases_password{
+    margin-top: -10px;
     width: 338px;
     margin-left: 20px;
     font-family: soleil, Helvetica, Arial, sans-serif;
@@ -245,7 +281,10 @@ transition: 2s;
     font-size: 13px;
     line-height: 24px;
    text-align: left;
-  display: none
+  display: none;
+}
+.test_cases_password2{
+    display: block;
 }
 ul {
     list-style: none; /* Remove default bullets */
@@ -253,19 +292,23 @@ ul {
   
   ul li::before {
     margin-left: -35px;
-    content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+   
     color: #767676; 
     font-weight: bold; 
-    display: inline-block; /* Needed to add space between the bullet and the text */
+    display: inline-block; 
     width: 1em; /* Also needed for space (tweak if needed) */
    /* Also needed for space (tweak if needed) */
+   list-style: none;
   }
-
+ .hey::before{
+    content:"\2713";
+ }
 
 
 .selectcountryLabel{
     position: absolute;
     top: 200px;
+   
     left: 18px;
     padding-left: 9px;
     font-size: 13px;
@@ -274,6 +317,9 @@ ul {
     color: #767676;
     pointer-events: none;
     
+}
+.selectcountryLabel2{
+    top:297px;
 }
 .bottom-country{
     display: flex;
@@ -293,4 +339,10 @@ ul {
     top: 50%;
     z-index: 10;
     }
-    
+   /* testcase checking signs  */
+    .tc1,.tc3,.tc4,.tc2{
+color: red;
+    }
+    .tcdone{
+        color: blue;
+    }
