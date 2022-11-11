@@ -33,9 +33,9 @@ a{
     align-items: center;
     transition: 0.5s;
     width: 100%;
-    z-index: 99;
+    z-index: 1;
     border-bottom: 1px solid rgb(220, 216, 216);
-    background-color: #ffffff;
+    background-color: white;
 }
 #navbar2{
     display: flex;
@@ -104,7 +104,7 @@ color:rgb(20, 20, 26);
 .free>p:hover{
   color:rgb(21, 21, 29);
 }
-/*  */
+/* New Project */
 .Gifts{
     padding: 30px;
     width: 200px;
@@ -154,6 +154,7 @@ body{
     font-family:"soleilbold";
     color:#b9b9b9
 }
+
 /* Footer Section */
 
 #footer-1{
@@ -213,6 +214,11 @@ body{
 #footer{
     color: black;
     background-color: #f0f1f2;
-    margin-top: 100px;
     margin-bottom: 0px;
+}
+.sign-In-click{
+    cursor: pointer;
+}
+#bhasad{
+    width: 8%;
 }

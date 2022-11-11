@@ -68,7 +68,7 @@ const navbar=()=>{
         <div class="dropdown-menu full">
             <div id="Women">
                     <div>
-                        <h2 class="BFP">Women</h2>
+                        <h2 class="BFP"> Women</h2>
                         <h5 class="bold">New Arrivals</h5>
                         <h5 class="bold red">Gifts</h5>
                         <h5 class="bold">Best Sellers</h5>
