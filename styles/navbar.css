@@ -36,6 +36,7 @@ a{
     z-index: 1;
     border-bottom: 1px solid rgb(220, 216, 216);
     background-color: white;
+    
 }
 #navbar2{
     display: flex;
@@ -116,10 +117,12 @@ color:rgb(20, 20, 26);
     text-decoration: underline;
 }
 body{
+    padding: 0px;
+    margin: 0px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-align: center;
+    /* text-align: center; */
     overflow-x: hidden;
     font-family: "soleil";
 }
