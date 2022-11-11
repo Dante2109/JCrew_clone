@@ -1,21 +1,21 @@
 @font-face {
     font-family: "soleil";
-    src: url(./Components/fonts/soleil/SoleilLight.otf);
+    src: url("../fonts/soleil/SoleilLight.otf");
 }
 
 @font-face {
     font-family: "Bfp";
-    src: url(./Components/fonts/Frieght-big-pro/FreightBigProLight-Regular.ttf);
+    src: url("../fonts/Frieght-big-pro/FreightBigProLight-Regular.ttf");
 }
 
 @font-face {
     font-family: "soleilbold";
-    src: url(./Components/fonts/soleil/SoleilBold.otf);
+    src: url("../fonts/soleil/SoleilBold.otf");
 }
 
 @font-face {
     font-family: "soleilregular";
-    src: url(./Components/fonts/soleil/SoleilRegular.otf);
+    src: url("../fonts/soleil/SoleilRegular.otf");
 }
 
 a{
@@ -33,8 +33,9 @@ a{
     align-items: center;
     transition: 0.5s;
     width: 100%;
-    z-index: 1;
+    z-index: 99;
     border-bottom: 1px solid rgb(220, 216, 216);
+    background-color: #ffffff;
 }
 #navbar2{
     display: flex;
@@ -124,7 +125,7 @@ body{
 }
 #Women,#Men{
  display: flex;
- line-height: 5px;
+ line-height: 25px;
  margin: auto;   
 }
 #Women>div,#Men>div{
