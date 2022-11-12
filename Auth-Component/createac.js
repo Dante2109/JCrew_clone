@@ -276,10 +276,31 @@ export default ()=>{
     <div class="sign-up-btn">   <button class="sign-up-input-btn">CREATE AN ACCOUNT</button></div>
     
     <div class="terms">
-    <p>By clicking "Create an Account", you agree to our <a href="https://www.jcrew.com/in/help/terms-of-use">Terms of Use</a>and <a href="https://www.jcrew.com/in/help/privacy-policy">Privacy Policy</a>, including the <a href="https://www.jcrew.com/in/help/cookie-policy">>Use of Cookies</a> and the transfer of your personal information to the United States, a jurisdiction that may not provide an equivalent level of data protection to the laws in your home country.
+    <p>By clicking "Create an Account", you agree to our <a style="
+  
+    font-family: soleil, Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight:400;
+    font-size: 12px;
+    text-decoration:underline;
+    color: #767676"href="https://www.jcrew.com/in/help/terms-of-use">Terms of Use</a> and <a  style="
+  
+    font-family: soleil, Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight:400;
+    font-size: 12px;
+    text-decoration:underline;
+    color: #767676"href="https://www.jcrew.com/in/help/privacy-policy">Privacy Policy</a>, including the <a  style="
+  
+    font-family: soleil, Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight:400;
+    font-size: 12px;
+    
+    color: #767676 ;text-decoration:underline;"href="https://www.jcrew.com/in/help/cookie-policy"> Use of Cookies</a>  and the transfer of your personal information to the United States, a jurisdiction that may not provide an equivalent level of data protection to the laws in your home country.
     </p>
      </div>
-    <hr class="sign-In">
+    <hr style="color: #767676"class="sign-In">
     <div class="signIninSignUp"><span>Already have an account?</span>&nbsp;<span class="signuplinkbtn2">Sign In now</span></div>
     </form>`
     
