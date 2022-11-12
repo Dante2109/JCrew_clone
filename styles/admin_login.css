@@ -54,10 +54,12 @@
     margin-bottom: 30px;
     height: 42px;
 }
+
 .contactDeveloper{
     text-decoration: none;
     color: rgb(1, 1, 185);
 }
+
 #submit{
     background-color: black;
     font-weight: 700;
