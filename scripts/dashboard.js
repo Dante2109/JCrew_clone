@@ -53,6 +53,7 @@ function removeData(data,index,type){
     let NSData= data.filter((el,i)=>{
         return i!=index
     })
+    
     append(NSData)
     localStorage.setItem(type,JSON.stringify(NSData))
 }
@@ -97,13 +98,15 @@ addProduct.onclick = () => {
         localStorage.setItem("women",JSON.stringify(womenData))
         append(womenData)
     }    
-}    
-let mData = JSON.parse(localStorage.getItem("men")) || []
-let wData = JSON.parse(localStorage.getItem("women")) || []
+}
+
+// window.location.href = "dashboard.html"
 let selectMen = document.getElementById("selectMen").onclick=()=>{
-    append(mData)
+    menData = JSON.parse(localStorage.getItem("men")) || []
+    append(menData)
 }
 
 let selectWomen = document.getElementById("selectWomen").onclick=()=>{
-    append(wData)
+    womenData = JSON.parse(localStorage.getItem("women")) || []
+    append(womenData)
 }

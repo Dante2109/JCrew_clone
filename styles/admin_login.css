@@ -10,7 +10,7 @@ body{
 
 @font-face {
     font-family: "Bfp";
-    src: url(../fonts/Frieght-big-pro/FreightBigProSemibold-Regular.woff);
+    src: url(../fonts/Frieght-big-pro/FreightBigProLight-Regular.ttf);
 }
 
 @font-face {
@@ -90,6 +90,7 @@ hr.grayline{
 
 /* ******************DASHBOARD************************ */
 #admin-navbar{
+    font-family: "Bfp";
     border-bottom: 1px solid rgb(189, 189, 189);
     display: flex;
     justify-content: space-between;
