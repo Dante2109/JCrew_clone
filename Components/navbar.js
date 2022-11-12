@@ -464,7 +464,7 @@ const navbar=()=>{
    
     <div style="display:flex; justify-content:space-between; margin-right: 30px; width: 8%;">
         <p class="sign-In-click"><a href="login.html">Signin</a></p>
-        <p><a href="cart.html">Cart</a></p>
+        <p><a href="cart.html">Cart </a><span id="cartt"></span></p>
     </div>
 </div>`
 }

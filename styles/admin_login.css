@@ -57,7 +57,7 @@ body{
     margin-bottom: 30px;
     height: 42px;
 }
-a{
+.contactDeveloper{
     text-decoration: none;
     color: rgb(1, 1, 185);
 }
@@ -119,13 +119,13 @@ hr.grayline{
 #main{
     display: flex;
 }
-h4{
+#h4{
     font-family: "soleil";
     font-size: 20px;
     text-align: center;
     margin-bottom: 0px;
 }
-h3{
+#h3{
     font-family: "Bfp";
 }
 #left{
