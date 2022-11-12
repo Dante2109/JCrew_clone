@@ -1,20 +1,54 @@
 #box{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(5, 600px);
+    /* gap: 20px; */
     width: 90%;
     margin: auto;
     margin-right: 25px;
-
+    
     
 }
 #SortbyPrice{
-  width: 15%;
+  box-sizing: content-box;
+  line-height: 1.15;
+  margin: 0;
+  font-family: "soleil";
+  color: #000;
+  width: 10%;
+  height: 35px;
+  border: 0px;
+  font-size: 16px;
+  border: 0.5px solid black;
+  text-align: center;
+}
+#SortbyName{
+  margin-left: 50px;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  line-height: 1.15;
+  margin: 0;
+  font-family: "soleil";
+  color: #000;
+  overflow: -moz-hidden-unscrollable;
+  width: 10%;
+  text-align: center;
+  font-size: 10px;
+  height: 35px;
+  border: 0px;
+  font-size: 16px;
+  border: 0.5px solid black;
+
+}
+#sortbyName>option{
+  background-color:blue;
+
+
+
 }
 
 #box > div >img{
     width: 100%;
-    
-   
 }
 #box>div{
     padding-bottom: 20px;
@@ -25,16 +59,36 @@
     text-align: left;
     margin: auto;
 }
-#box>div p{
-    font-size: 22px;
-}
-#box>div>h4{
-  font-size: 12px;
-}
 
 #box>div>button{
-  font-size: 30px;
-  border-radius: 10px;
+  -webkit-text-size-adjust: 100%;
+  visibility: visible!important;
+  white-space: normal;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  overflow: visible;
+  font-family: soleil,Helvetica,Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  border-radius: 0;
+  text-decoration: unset;
+  text-transform: unset;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  cursor: pointer;
+  -webkit-appearance: button;
+  font-size: 1rem;
+  line-height: 1rem;
+  letter-spacing: .09375rem;
+  font-weight: 700;
+  margin-right: .625rem;
+  background-color: #000;
+  color: #fff;
+  margin-bottom: .75rem;
+  display: block;
+  width: 100%;
+  float: none;
+  height: 2.75rem;
 }
 #btn{
   font-size: 20px;
@@ -56,221 +110,25 @@ select{
 }
 @font-face {
   font-family: "soleil";
-  src: url(./Components/fonts/soleil/SoleilLight.otf);
+  src: url(../fonts/soleil/SoleilLight.otf)
 }
 
 @font-face {
   font-family: "Bfp";
-  src: url(./Components/fonts/Frieght-big-pro/FreightBigProLight-Regular.ttf);
+  src: url(../fonts/Frieght-big-pro/FreightBigProLight-Regular.ttf);
 }
 
 @font-face {
   font-family: "soleilbold";
-  src: url(./Components/fonts/soleil/SoleilBold.otf);
+  src: url(../fonts/soleil/SoleilBold.otf);
 }
 
 @font-face {
   font-family: "soleilregular";
-  src: url(./Components/fonts/soleil/SoleilRegular.otf);
-}
-
-a{
-  color: white;
-  text-decoration: none;
-  font-size: 15px;
-}
-#navbar{
-  display: flex;
-  justify-content: space-between;
-  height: 40px;
-  padding: 10px ;
-  position: fixed;
-  top: 0;
-  align-items: center;
-  transition: 0.5s;
-  width: 100%;
-  z-index: 1;
-  border-bottom: 1px solid rgb(220, 216, 216);
-}
-#navbar2{
-  display: flex;
-  justify-content: space-around;
-  gap: 8px;
-  align-items: center;
-  position: relative;
-}
-#navbar2>p{
-  padding: 10px 20px;
-  border-radius: 3px;
-}
-#navbar2>a>img{
-  width:115px;
-  margin-left: 10px;
-}
-#navbar2>p:hover{
-  color:rgb(10, 10, 12);
-  cursor: pointer;
-}
-.sticky{
-  background-color: white; 
-  overflow: hidden;  
-  opacity: 1;
-
-}
-#navbar a{
-  text-decoration: none;
-  color: black;
-}
-/*  */
-.dropdown.active > .link,
-.link:hover{ 
-cursor: pointer;
-color:rgb(20, 20, 26);
-}
-.link{
-  padding: 2px 20px;
-  font-family: "soleilregular";
-}
-
-.dropdown-menu{
-  position: fixed;
-  background-color: white;
-  border: 1px transparent;
-  border-radius: 7px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  opacity: 0;
-  transform: translateY(-10%);
-  transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
-  pointer-events: none;
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  margin: auto;
-  padding: 10px;
-}
-
-.dropdown.active >.link+.dropdown-menu{
-  opacity: 1;
-  pointer-events: auto;
-  transform: translateY(0);
+  src: url(../fonts/soleil/SoleilRegular.otf);
 }
 
 
-.free>p:hover{
-color:rgb(21, 21, 29);
-}
-/*  */
-.Gifts{
-  padding: 30px;
-  width: 200px;
-}
-#navbar h5>a{
-  text-decoration: underline;
-}
-#navbar h5:hover{
-  text-decoration: underline;
-}
-body{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  overflow-x: hidden;
-  font-family: "soleil";
-}
-#Women,#Men{
-display: flex;
-line-height: 5px;
-margin: auto;   
-}
-#Women>div,#Men>div{
-  padding: 10px;
-}
-
-.pum_div{
-  padding: 10px;
-}
-
-.bold{
-  font-family: "soleilbold";
-}
-.BFP{
-  font-family: "Bfp";
-  margin-bottom: 30px;
-}
-.full{
-  left: 0px;
-  right: 0px;
-}
-.red{
-  color:red
-}
-.greyBold{
-  font-family:"soleilbold";
-  color:#b9b9b9
-}
-/* Footer Section */
-
-#footer-1{
-  display: flex;
-  text-align: left;
-}
-#footer-1>div{
-  padding: 50px;
-}
-#footer-1>div p{
-font-size: 14px;
-line-height: 18px;
-margin-top: -5px;
-}
-#footer>#footer-1 .less-l>p{
-  line-height: 20px;
-}
-#footer-1>div>h4{
-  font-size: 15px;
-}
-.footer-2{
-  padding: 50px;
-  text-align: left;
-}
-
-.pad{
-  padding: 10px;
-}
-.einput{
-  width: 280px;
-}
-.blackb{
-  font-family: "soleilbold";
-  margin-left: -5px;
-  border: 3px solid black;
-}
-
-/* <!--1st section ended  -->
-<!-- 2nd table section started --> */
-
-#footer-last{
-  width: 75%;
-  text-align: left;
-  justify-content: space-between;
-  align-items: top;
-  margin:auto;
-  margin-left: 50px;
-  line-height: 10px;
-  margin-bottom: 50px;
-
-}
-#fl1>a>i{
-  font-size: 30px;
-  margin-right: 25px;
-  color: black;
-}
-#footer{
-  color: black;
-  background-color: #f0f1f2;
-  margin-top: 100px;
-  margin-bottom: 0px;
-}
 #sizes{
   display: grid;
   flex-wrap: wrap;
@@ -289,4 +147,36 @@ margin-top: -5px;
 #sizes>div:hover{
   border: 2px solid black;
   cursor: pointer;
+}
+
+#buttons { 
+  
+  display:flex;
+  justify-content: space-evenly;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+#buttons button{
+  background-color: white;
+  border: 1px solid gray;
+  width: 40px;
+  padding: 3px 5px;
+  border-radius: 2px;
+  cursor:pointer; 
+}
+.name{
+  font-family: "soleil";
+  font-size: 16px;
+  text-transform: capitalize;
+}
+
+.special{
+font-family:"soleil";
+font-size: 14px;
+}
+
+.price{
+  font-family: "soleil";
+  font-size: 14px;
 }
