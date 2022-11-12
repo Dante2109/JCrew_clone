@@ -303,11 +303,11 @@ var mensData = [
   
   function storeData(productImg,name,special,price,sie_value){
    let obj={
-    productImg,
-    name,
-    special,
-    price,
-    sie_value,
+    image:productImg,
+    name:name,
+    description:special,
+    price:price,
+    size:sie_value,
    }
    let NSdata = JSON.parse(localStorage.getItem("cart")) || [];
    console.log(NSdata)
