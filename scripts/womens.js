@@ -198,6 +198,11 @@ var womensData = [
     let div=document.getElementById("SortbyPrice")
    div.addEventListener("change",sortbyprice)
 
+   let div2=document.getElementById("SortbyName")
+   div2.addEventListener("change",namesort)
+
+   
+
     let cart=JSON.parse(localStorage.getItem("cart")) || [];
     let womenArr=JSON.parse(localStorage.getItem("women"))|| []
       // console.log(cart)
@@ -341,7 +346,7 @@ var womensData = [
       display(womensData)
       }
       if(selected=="Descending"){
-        mensData.sort(function(a,b){
+        womensData.sort(function(a,b){
         if(a.name>b.name) return -1
         if(a.name<b.name) return 1
         return 0
