@@ -2,38 +2,13 @@ import {navbar,transitions} from "../Components/navbar.js"
 document.getElementById("navbar").innerHTML=navbar()
 transitions()
 
-let cartData=[
-    {
-        image: "https://www.jcrew.com/s7-img-facade/BJ706_YD2387?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=480&hei=480",
-        name: "Shirt1",
-        description: "Secret Wash cotton poplin shirt",
-        size: "XI",
-        quantity:2,
-        price: 7699,
-      
-    },
-    {
-        image: "https://www.jcrew.com/s7-img-facade/BJ705_WX4266?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=480&hei=480",
-        name:"Shirt2",
-        description: "Secret Wash cotton poplin shirt",
-        size: "XI",
-        quantity:2,
-        price: 9499,
-    },
-    {
-        image: "https://www.jcrew.com/s7-img-facade/BE996_YD2386?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=480&hei=480",
-        name:"Shirt3",
-        description: "mens Broken-in organic cotton oxford shirt",
-        size: "XI",
-        quantity:2,
-        price: 7399,
-    },
-    
-]
+let cartData= JSON.parse(localStorage.getItem("cart"))
+console.log('cartData:', cartData)
+
 let itemCount = document.getElementById("itemCount")
 itemCount.innerText= `[ ${cartData.length} ]`
-let cartt = document.getElementById("cartt")
-cartt.innerText=cartData.length;
+// let cartt = document.getElementById("cartt")
+// cartt.innerText=cartData.length;
 let CARTvalue=cartData.length
 
 
@@ -41,7 +16,6 @@ let TotalCartPrice=0
 for(let i=0;i<cartData.length;i++){
     TotalCartPrice+=cartData[i].price
 }
-console.log(TotalCartPrice)
 
 
 let tbody = document.querySelector("tbody")
@@ -90,6 +64,7 @@ const append = (data) => {
         plus.innerText=" +";
 
         let td3 = document.createElement("td")
+        td3.className="td3"
         td3.innerText = `INR ${count*el.price}`
 
         
@@ -102,9 +77,11 @@ const append = (data) => {
             td3.innerText = `INR ${count*el.price}`
             TotalCartPrice+=el.price
             console.log('TotalCartPrice:', TotalCartPrice)
+            document.querySelector(".ItemSubtotal").innerText=`INR ${TotalCartPrice}.00`
+            document.querySelector(".EstimateTotal").innerText=`INR ${TotalCartPrice+99}.00`
             CARTvalue++;
             itemCount.innerText=`[ ${CARTvalue} ]`;
-            cartt.innerText=CARTvalue
+            // cartt.innerText=CARTvalue
             }
         })
 
@@ -115,16 +92,20 @@ const append = (data) => {
                 itemCount.innerText=`[ ${CARTvalue} ]`;
                 TotalCartPrice-=el.price
                 console.log('TotalCartPrice:', TotalCartPrice)
-                cartt.innerText=CARTvalue
+                document.querySelector(".ItemSubtotal").innerText=`INR ${TotalCartPrice}.00`
+                document.querySelector(".EstimateTotal").innerText=`INR ${TotalCartPrice+99}.00`
+                // cartt.innerText=CARTvalue
             }else{
             count--;
             number.innerText=count
             td3.innerText = `INR ${count*el.price}`;
             TotalCartPrice-=el.price
             console.log('TotalCartPrice:', TotalCartPrice)
+            document.querySelector(".ItemSubtotal").innerText=`INR ${TotalCartPrice}.00`
+            document.querySelector(".EstimateTotal").innerText=`INR ${TotalCartPrice+99}.00`
             CARTvalue--;
             itemCount.innerText=`[ ${CARTvalue} ]`;
-            cartt.innerText=CARTvalue
+            // cartt.innerText=CARTvalue
             }
         }
 
@@ -147,3 +128,6 @@ function removeData(data,index){
     append(NSData)
     // localStorage.setItem("cartData",JSON.stringify(NSData))
 }
+
+document.querySelector(".ItemSubtotal").innerText=`INR ${TotalCartPrice}.00`
+document.querySelector(".EstimateTotal").innerText=`INR ${TotalCartPrice+99}.00`
