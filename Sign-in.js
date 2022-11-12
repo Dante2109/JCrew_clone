@@ -1,4 +1,4 @@
-//Import===================================================================================================
+//Import========================================================================================================
 
 import LogIn from "./Auth-Component/login.js";
 
@@ -179,7 +179,7 @@ const showSignUpArea=()=>{
    var getCookie=(cName)=> {
         const name = cName + "=";
         const cDecoded = decodeURIComponent(document.cookie); //to be careful
-        const cArr = cDecoded.split('; ');
+        const cArr = cDecoded.split(';');
         let res;
         cArr.forEach(val => {
           if (val.indexOf(name) === 0) res = val.substring(name.length);
@@ -424,16 +424,13 @@ function numberFound(password){
         let obj={email,password,country,secKey};//Successful Signup==================================================
     arr.push(obj);
    localStorage.setItem("userCredentials",JSON.stringify(arr));
-   localStorage.setItem('loggedInstatus',JSON.stringify(loggedInstatus));
+   let loggedInstatus=true;
+       localStorage.setItem('loggedInstatus',JSON.stringify(loggedInstatus));
         document.querySelector(".sign-Up-Area").classList.remove("sign-Up-Area-height-extend");
         document.querySelector(".selectcountryLabel").classList.remove("selectcountryLabel2");
         document.querySelector(".test_cases_password").classList.remove("test_cases_password2");
 
-      // removeSignUpArea();
-      // removeSignInArea();
-     // showSignInArea();
-       // showSignInArea();
-         showSignInArea();
+      
      }
    
      }
@@ -581,7 +578,5 @@ function changePassWord(newpassword,Inputemail,Security,arr)
   localStorage.setItem("userCredentials",JSON.stringify(arr));
 
 }
-// let yoyo=()=>{
-//     console.log("chal ja bhootnike")
-// }
+
 export { removeSignInArea };

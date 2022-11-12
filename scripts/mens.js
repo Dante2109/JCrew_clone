@@ -103,12 +103,12 @@ var mensData = [
       },
       {
         image:
-          "https://www.jcrew.com/s7-img-facade/J1851_WT0002?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=480&hei=480",
+          "https://www.jcrew.com/s7-img-facade/AZ972_SR0059_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=540&hei=540",
           description:"NEW color",
-          name: "",
+          name: "Cashmere cable-knit sweater",
           
-        price: 5299,
-        type:"men"
+          price: 5299,
+          type:"men"
       },
       {
         image:
@@ -194,12 +194,7 @@ var mensData = [
           price: 5499,
           type:"men"
       },
-
-
-      
-  
-
-      
+   
     
   ];
   
