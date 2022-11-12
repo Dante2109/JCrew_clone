@@ -1,0 +1,420 @@
+* { 
+    padding: 0px;
+    margin: 0px;
+    background-color: #f8f8f8;
+}
+
+#cknav {
+    height: 72px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    position: sticky;
+    top: 0px;
+    z-index: 99;
+    box-shadow: rgba(0, 0, 0, 0.014) 0px 3px 8px;
+}
+
+#cknav > h1 > a {
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 100;
+    font-size: 42px;
+    line-height: 21px;
+    color: #141414;
+}
+
+#cknav > p {
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 21px;
+    color: #141414;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#cksec1 {
+    width: 60%;
+    height: auto;
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 70px;
+}
+
+#bx1 { 
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+}
+
+#bx1-1 {
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid rgb(190, 190, 190);
+}
+
+#bx1-1 > h3 {  
+    background-color: #ffffff;
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 23px;
+    color: #000000;
+    letter-spacing: 1px;
+}
+
+#rad1 {
+    background-color: #ffffff;
+    font-family: sans-serif;
+    font-weight: 700;
+    color: #000000;
+    font-size: 12px;
+    line-height: 21px;
+}
+
+#rad1 > label {  
+    background-color: #ffffff;
+}
+
+#rad1 > p {  
+    background-color: #ffffff;
+}
+
+#rad2 { 
+    background-color: #ffffff;
+}
+
+#rad2 > p {  
+    background-color: #ffffff;
+    font-family: sans-serif;
+    font-weight: 700;
+    color: #000000;
+    line-height: 21px;
+    font-size: 12px;
+}
+
+#radio1 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    background-color: #ffffff;
+    padding: 10px;
+}
+
+
+#radio2 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    background-color: #ffffff;
+    padding: 10px;
+}
+
+#bx1-2 {
+    border: 1px solid rgb(190, 190, 190);
+    color: red;
+}
+
+#bx1-12 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+
+#form1 {
+    display: flex;
+    gap: 22px;
+    align-items: center;
+}
+
+#form2 {
+    display: flex;
+    gap: 22px;
+    align-items: center;
+}
+
+#form3 {
+    display: flex;
+    gap: 5px;
+    font-family: sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 21px;
+    color: #000000;
+    background-color: #ffffff;
+}
+
+#form3 > label {
+    background-color: #ffffff;
+}
+
+#form4 {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    width: 95%;
+}
+
+#form5 {
+    background-color: #ffffff;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    width: 98%;
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 21px;
+    color: #000000;
+}
+
+#form4 > input {
+    width: 100%;
+}
+
+#agr { 
+    border: 1px solid gray;
+    width: 90%;
+    background-color: #ffffff;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px;
+    font-family: sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 21px;
+    color: #000000;
+}
+
+#agr > input {
+    width: 25px;
+    height: 25px;
+    background-color: #ffffff;
+}
+
+#agr > div > label { 
+    background-color: #ffffff;
+}
+
+#paybtn {
+    font-size: 14px;
+    font-family: sans-serif;
+    border: none;
+    width: 95%;
+    height: 44px;
+    color: #fff;
+    background-color: #0161ff;
+    cursor: pointer;
+    letter-spacing: 1.5px;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 17px;
+    padding: 1px 6px;
+}
+
+#bx1-12 > h3{
+    background-color: #ffffff;
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 23px;
+    color: #000000;
+    letter-spacing: 1px;
+}
+
+#bx1-12 > input {
+    background-color: #ffffff;
+    width: 90%;
+    padding: 7px 10px;
+    border: 1px solid gray;
+}
+
+#bx1-12 > div > input {
+    background-color: #ffffff;
+    padding: 7px;
+    border: 1px solid gray;
+} 
+
+#form3 > input { 
+    width: 20px;
+    height: 20px;
+    border-radius: 0px;
+}
+
+#bx2 { 
+    border: 1px solid rgb(190, 190, 190);
+    width: 45%;
+    height: 400px;
+    background-color: #ffffff;
+    padding: 10px;
+}
+
+#pay1 { 
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    padding: 15px;
+    background-color: #ffffff;
+}
+
+#pay1 > button > a {
+    text-decoration: none;
+    color: #000;
+    background-color: #ffffff;
+}
+
+#pay1 > button > a:hover {
+    color: #0161ff;
+}
+
+#pay1 > button {
+    width: 80%;
+    height: 90%;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 700;
+    color: #000;
+    font-weight: normal;
+    text-transform: uppercase;
+    line-height: 17px;
+    font-size: 14px;
+    font-family: sans-serif;
+    text-align: center;
+    letter-spacing: 1.5px;
+    background-color: #ffffff;
+}
+
+#pay1 > button:hover { 
+    border: 1px solid #0161ff;
+    color: #0161ff;
+}
+
+#appendCart { 
+    width: 90%;
+    margin: auto;
+    padding: 15px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+#pay2 { 
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    padding: 15px;
+    background-color: #ffffff;
+}
+
+#pay2 > button {
+    width: 80%;
+    height: 90%;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 700;
+    color: #000;
+    font-weight: normal;
+    text-transform: uppercase;
+    line-height: 17px;
+    font-size: 14px;
+    font-family: sans-serif;
+    text-align: center;
+    letter-spacing: 1.5px;
+    background-color: #ffffff;
+}
+
+#pay2 > button:hover { 
+    border: 1px solid #0161ff;
+    color: #0161ff;
+}
+
+#bx2 > hr { 
+    width: 85%;
+    margin: auto;
+    margin-top: 10px;
+}
+
+#pay3  {
+    width: 80%;
+    margin: auto;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px;
+    height: 35px;
+    background-color: #ffffff;
+}
+
+#pay3 > p {
+    font-family: sans-serif;
+    font-weight: 500;
+    line-height: 21px;
+    font-size: 12px;
+    background-color: #ffffff;
+}
+
+#pay4  {
+    width: 85%;
+    margin: auto;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px;
+    height: 35px;
+    background-color: #ffffff;
+    margin-bottom: 50px;
+}
+
+#pay4 > p { 
+    font-family: sans-serif;
+    font-size: 14px;
+    line-height: 21px;
+    color: #000000;
+    font-weight: 700;
+    background-color: #ffffff;
+}
+
+#chkfot { 
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#quickLinks {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    color: #000000;
+
+}
+
+#quickLinks > div:hover {
+    cursor: pointer;
+    color: #0161ff;
+}
