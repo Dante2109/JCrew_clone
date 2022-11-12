@@ -1,7 +1,4 @@
-body{
-    margin: 0px;
-    padding: 0px;
-}
+
 
 @font-face {
     font-family: "soleil";
@@ -119,12 +116,12 @@ hr.grayline{
 #main{
     display: flex;
 }
-h4{
+/* h4{
     font-family: "soleil";
     font-size: 20px;
     text-align: center;
     margin-bottom: 0px;
-}
+} */
 h3{
     font-family: "Bfp";
 }

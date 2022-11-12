@@ -1,11 +1,11 @@
 #box{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(4,1fr);
     width: 90%;
     margin: auto;
     margin-right: 25px;
-
-    
+    margin-top: 20px;
+ 
 }
 
 #box > div >img{
@@ -53,4 +53,161 @@ select{
 }
 #box>div>p{
  font-display: bold;
+}
+#SortbyPrice{
+  box-sizing: content-box;
+  line-height: 1.15;
+  margin: 0;
+  font-family: "soleil";
+  color: #000;
+  width: 10%;
+  height: 35px;
+  border: 0px;
+  font-size: 16px;
+  border: 0.5px solid black;
+  text-align: center;
+}
+#SortbyName{
+  margin-left: 50px;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  line-height: 1.15;
+  margin: 0;
+  font-family: "soleil";
+  color: #000;
+  overflow: -moz-hidden-unscrollable;
+  width: 10%;
+  text-align: center;
+  font-size: 10px;
+  height: 35px;
+  border: 0px;
+  font-size: 16px;
+  border: 0.5px solid black;
+
+}
+#sortbyName>option{
+  background-color:blue;
+
+
+
+}
+#box>div>button{
+  -webkit-text-size-adjust: 100%;
+  visibility: visible!important;
+  white-space: normal;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  overflow: visible;
+  font-family: soleil,Helvetica,Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  border-radius: 0;
+  text-decoration: unset;
+  text-transform: unset;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  cursor: pointer;
+  -webkit-appearance: button;
+  font-size: 1rem;
+  line-height: 1rem;
+  letter-spacing: .09375rem;
+  font-weight: 700;
+  margin-right: .625rem;
+  background-color: #000;
+  color: #fff;
+  margin-bottom: .75rem;
+  display: block;
+  width: 100%;
+  float: none;
+  height: 2.75rem;
+}
+#btn{
+  font-size: 20px;
+}
+select{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+#bt{
+  font-size: 35px;
+  margin-left: 50%;
+}
+#head{
+    text-align: center;
+    font-size: 40px;
+}
+#box>div>p{
+ font-display: bold;
+}
+@font-face {
+  font-family: "soleil";
+  src: url(../fonts/soleil/SoleilLight.otf)
+}
+
+@font-face {
+  font-family: "Bfp";
+  src: url(../fonts/Frieght-big-pro/FreightBigProLight-Regular.ttf);
+}
+
+@font-face {
+  font-family: "soleilbold";
+  src: url(../fonts/soleil/SoleilBold.otf);
+}
+
+@font-face {
+  font-family: "soleilregular";
+  src: url(../fonts/soleil/SoleilRegular.otf);
+}
+
+
+#sizes{
+  display: grid;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(3,1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+#sizes>div{
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  margin: auto;
+  padding: 5px;
+  border: 0.5px solid grey;
+}
+#sizes>div:hover{
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+#buttons { 
+  
+  display:flex;
+  justify-content: space-evenly;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+#buttons button{
+  background-color: white;
+  border: 1px solid gray;
+  width: 40px;
+  padding: 3px 5px;
+  border-radius: 2px;
+  cursor:pointer; 
+}
+.name{
+  font-family: "soleil";
+  font-size: 16px;
+  text-transform: capitalize;
+}
+
+.special{
+font-family:"soleil";
+font-size: 14px;
+}
+
+.price{
+  font-family: "soleil";
+  font-size: 14px;
 }
