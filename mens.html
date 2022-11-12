@@ -8,13 +8,14 @@
     <link rel="stylesheet" href="./styles/mens.css">
 </head>
 <body>
+    <!-- <div id="navbar"></div> -->
     <p id="head">SHOP ALL MEN'S CLOTHING</p>
-    <select name="Featured" id="SortbyPrice" onchange="sortbyprice()">
+    <select name="Featured" id="SortbyPrice" >
         <option value="Featured" >Featured</option>
         <option value="Price:High to low">Price:High to low</option>
         <option value="Price:Low to high">Price:Low to high</option>
       </select>
-      <select name="SortbyName" id="SortbyName" onchange="namesort()">
+      <select name="SortbyName" id="SortbyName" >
         <option value="Sort by Name" >Sort by Name</option>
         <option value="Ascending">Ascending</option>
         <option value="Descending">Descending</option>
@@ -24,4 +25,4 @@
 
 </body>
 </html>
-<script src="scripts/mens.js"></script>
+<script type="module" src="scripts/mens.js"></script>

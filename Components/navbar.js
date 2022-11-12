@@ -462,12 +462,16 @@ const navbar=()=>{
         </div>
     </div>
    
+
+
+
     <div id="bhasad" style="display:flex; justify-content:space-between; margin-right: 30px;">
     <p id="Myaccount"></p>
     <!-- change 1 -->
    <p class="sign-In-click">Sign In</p>
     <p><a href="cart.html"><i class="fa-light fa-bag-shopping"></i><span id="cartvalue"></span></a></p>
     <p id="Logout"></p>
+
     </div>
 </div>`
 }
