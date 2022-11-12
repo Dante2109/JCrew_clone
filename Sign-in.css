@@ -1,245 +1,81 @@
-
 .overlay{
-width: 100%;
-position: fixed;
-top: 0%;
-height: 100vh;
-background-color: black;
-opacity: 0;
-z-index: -2;
-transition: 1s;
-}
-.showOverlay{
-    opacity: 0.5;
-    z-index: 1;
-}
-.sign-in-area{
-    width: 375px;
-    height: auto;
-    background-color: white;
-    padding-top: 5px;
-    padding-right: 5px;
-    position: absolute;
-    top: -50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-    transition: 2s;
-}
-.showSignInArea{
-top: 50%;
-z-index: 4;
-}
-
-.formlogin{
     width: 100%;
-    height: auto;
-  
-    /* background-color: white; */
+    position: fixed;
+    top: 0%;
+    height: 100vh;
+     background: rgba(0, 0, 0, 0.35);
+    opacity: 0;
+    z-index: -3;
+    transition: 1s;
+    }
+    .showOverlay{
+        opacity: 1;
+        z-index: 1;
+    }
+    .sign-in-area{
+        width: 375px;
+        height: auto;
+        background-color: white;
+        padding-top: 5px;
+        padding-right: 5px;
+        position: absolute;
+        top: -50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+        transition: 2s;
+    }
+    .showSignInArea{
+    top: 50%;
+    z-index: 4;
+    }
     
-}
-.formlogin>div:nth-child(1)>p{
-    
-    text-align: center;
-    font-family: soleil, Helvetica, Arial, sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 24px;
-    color: #000000;
-}
-
-
-
-.field{
-    width: 330px;
-    height: 42px;
-    border: none;   
-    padding-left: 5px;   
-}
-.field2{
-    width: 280px;
-}
-
-.emaildiv{
-    margin:20px;  
-}
-.emaildiv>input{
-    border:1px solid gray;
-}
-.password{
-    display: flex;
-    margin: 20px;
-    border:1px solid gray;
-   width: 336px;
-}
-.eye-image-div{
-
-height: 44px;
-width: 49px;
-background-color: white;
-border: none;
-border-left:1px solid gray;
-
-}
-.eye,.eye2{
-    height: 25px;
-    display: flex;
-  margin: auto;
-  margin-top: 11px;
-  cursor: pointer;
-}
-.bottom-password{
-    display: flex;
-    margin: 20px;
-  
-    justify-content: space-between;
-}
-.rememberMe{
-    font-family: soleil, Helvetica, Arial, sans-serif; 
-    font-style: normal;
-    font-weight: 200;
-    font-size: 14px;
-
-}
-.forgetPassword{
-font-family: soleil, Helvetica, Arial, sans-serif;
-font-weight: 400;
-font-style: normal;
-font-size: 13px;
-line-height: 14px;
-color: #0161ff;
-margin-top: 3px;
-cursor: pointer;
-}
-.sign-in-input-btn,.sign-up-input-btn{
-    margin:0px 20px 0px 18px;
-    background-color: black;
-    font-family: soleil, Helvetica, Arial, sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 14px; 
-    color: white;
-    width: 340px;
-    height: 42px;
-    cursor: pointer;
-}
-
-.terms{
-    margin: 20px;
-    margin-top: 5px;
-    font-family: soleil, Helvetica, Arial, sans-serif;
-    font-style: normal;
-    font-weight:400;
-    font-size: 12px;
-    line-height: 16px;
-    color: #767676;
-}
-
-hr{
-    margin: 20px;
-    width: 333px;
-    margin-top: 60px;
-}
-.signupinSignIn,.signIninSignUp{
-    width: 330px;
-    height: 42px;
-    margin: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: soleil, Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    font-weight: 700;
-}
-.signuplinkbtn,.signuplinkbtn2
-{
-
-    color:#0163ff ;
-    cursor: pointer;
-}
-.adminTextDiv{
-    width: 330px;
-    height: 42px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    .formlogin{
+        width: 100%;
+        height: auto;
+      
+        /* background-color: white; */
+        
+    }
+    .formlogin>div:nth-child(1)>p{
+        
+        text-align: center;
+        font-family: soleil, Helvetica, Arial, sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        color: #000000;
+    }
     
     
-}
-.adminlogin{
-    font-family: soleil, Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    font-weight: 700;
-    color:#0163ff ;
-    cursor: pointer;
-    margin-left: 50px;
-}
-.cross,.cross2{
-    position: absolute;
-    right: 17px;
-    top: 9px;
-    font-size: 38px;
-    color: #767676;
-    cursor: pointer;
-}
-
-.password_label{
-     position: absolute;
-    top: 132px;
-    left: 18px;
-    padding-left: 9px;
-    font-size: 13px;
-    font-weight: 400;
-    letter-spacing: .3px;
-    color: #767676;
-    pointer-events: none;
-}
-
-.email_label{
-position: absolute;
-    top: 67px;
-    left: 18px;
-    padding-left: 9px;
-    font-size: 13px;
-    font-weight: 400;
-    letter-spacing: .3px;
-    color: #767676;
-    pointer-events: none;
-
-
-}
-
-
-
-
-/* ------------------------Sign-Up-Area------------------ */
-.sign-Up-Area{
-width: 375px;
-height: 555px;
-
-background-color: white;
-padding-top: 5px;
-padding-right: 5px;
-position: absolute;
- top: -50%;
-left: 50%; 
- transform: translate(-50%,-50%);
-box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-transition: 2s; 
-}
-.sign-Up-Area-height-extend{
-    height: 675px;
-}
-
-
-
-.form-SignUp{
-    width: 100%;
     
-}
-.form-SignUp>div:nth-child(1)>p{
+    .field{
+        width: 330px;
+        height: 42px;
+        border: none;   
+        padding-left: 5px;   
+    }
+    .field2{
+        width: 280px;
+    }
     
+    .emaildiv{
+        margin:20px;  
+    }
+    .emaildiv>input{
+        border:1px solid gray;
+    }
+    .password{
+        display: flex;
+        margin: 20px;
+        border:1px solid gray;
+       width: 336px;
+    }
+    .eye-image-div{
+    
+
+
     text-align: center;
     font-family: soleil, Helvetica, Arial, sans-serif;
     font-style: normal;
@@ -252,91 +88,267 @@ transition: 2s;
     margin-left: 20px;
     width: 338px;
     height: 44px;
+    width: 49px;
+    background-color: white;
+    border: none;
+    border-left:1px solid gray;
+    
+    }
+    .eye,.eye2{
+        height: 25px;
+        display: flex;
+      margin: auto;
+      margin-top: 11px;
+      cursor: pointer;
+    }
+    .bottom-password{
+        display: flex;
+        margin: 20px;
+      
+        justify-content: space-between;
+    }
+    .rememberMe{
+        font-family: soleil, Helvetica, Arial, sans-serif; 
+        font-style: normal;
+        font-weight: 200;
+        font-size: 14px;
+    
+    }
+    .forgetPassword{
     font-family: soleil, Helvetica, Arial, sans-serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 13px;
-    line-height: 24px;
-    color: #000000;
-    padding-left: 3px;
-    padding-top: 5px;
-    border: 1px solid gray;
-}
-.showOutLine{
-    border:2px solid black
-}
-.test_cases_password{
-    margin-top: -10px;
-    width: 338px;
-    margin-left: 20px;
-    font-family: soleil, Helvetica, Arial, sans-serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 13px;
-    line-height: 24px;
-   text-align: left;
-  display: none;
-}
-.test_cases_password2{
-    display: block;
-}
-ul {
-    list-style: none; /* Remove default bullets */
-  }
-  
-  ul li::before {
-    margin-left: -35px;
-   
-    color: #767676; 
-    font-weight: bold; 
-    display: inline-block; 
-    width: 1em; /* Also needed for space (tweak if needed) */
-   /* Also needed for space (tweak if needed) */
-   list-style: none;
-  }
- .hey::before{
-    content:"\2713";
- }
-
-
-.selectcountryLabel{
-    position: absolute;
-    top: 200px;
-   
-    left: 18px;
-    padding-left: 9px;
-    font-size: 13px;
     font-weight: 400;
-    letter-spacing: .3px;
-    color: #767676;
-    pointer-events: none;
+    font-style: normal;
+    font-size: 13px;
+    line-height: 14px;
+    color: #0161ff;
+    margin-top: 3px;
+    cursor: pointer;
+    }
+    .sign-in-input-btn,.sign-up-input-btn{
+        margin:0px 20px 0px 18px;
+        background-color: black;
+        font-family: soleil, Helvetica, Arial, sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 14px; 
+        color: white;
+        width: 340px;
+        height: 42px;
+        cursor: pointer;
+    }
     
-}
-.selectcountryLabel2{
-    top:297px;
-}
-.bottom-country{
-    display: flex;
-    margin: 20px;
-  
-    justify-content: flex-start;
-   
-}
-.sign-up{
-    margin: 20px;
-    width: 333px;
-    margin-top: 40px;
+    .terms{
+        margin: 20px;
+        margin-top: 5px;
+        font-family: soleil, Helvetica, Arial, sans-serif;
+        font-style: normal;
+        font-weight:400;
+        font-size: 12px;
+        line-height: 16px;
+        color: #767676;
+    }
     
-}
-
-.showSignUpArea{
-    top: 50%;
-    z-index: 10;
+    hr{
+        margin: 20px;
+        width: 333px;
+        margin-top: 60px;
     }
-   /* testcase checking signs  */
-    .tc1,.tc3,.tc4,.tc2{
-color: red;
+    .signupinSignIn,.signIninSignUp{
+        width: 330px;
+        height: 42px;
+        margin: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: soleil, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        font-weight: 700;
     }
-    .tcdone{
-        color: blue;
+    .signuplinkbtn,.signuplinkbtn2
+    {
+    
+        color:#0163ff ;
+        cursor: pointer;
     }
+    .adminTextDiv{
+        width: 330px;
+        height: 42px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        
+    }
+    .adminlogin{
+        font-family: soleil, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        color:#0163ff ;
+        cursor: pointer;
+        margin-left: 50px;
+    }
+    .cross,.cross2{
+        position: absolute;
+        right: 17px;
+        top: 9px;
+        font-size: 38px;
+        color: #767676;
+        cursor: pointer;
+    }
+    
+    .password_label{
+         position: absolute;
+        top: 132px;
+        left: 18px;
+        padding-left: 9px;
+        font-size: 13px;
+        font-weight: 400;
+        letter-spacing: .3px;
+        color: #767676;
+        pointer-events: none;
+    }
+    
+    .email_label{
+    position: absolute;
+        top: 67px;
+        left: 18px;
+        padding-left: 9px;
+        font-size: 13px;
+        font-weight: 400;
+        letter-spacing: .3px;
+        color: #767676;
+        pointer-events: none;
+    
+    
+    }
+    
+    
+    
+    
+    /* ------------------------Sign-Up-Area------------------ */
+    .sign-Up-Area{
+    width: 375px;
+    height: 555px;
+    
+    background-color: white;
+    padding-top: 5px;
+    padding-right: 5px;
+    position: absolute;
+     top: -50%;
+    left: 50%; 
+     transform: translate(-50%,-50%);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    transition: 2s; 
+    }
+    .sign-Up-Area-height-extend{
+        height: 675px;
+    }
+    
+    
+    
+    .form-SignUp{
+        width: 100%;
+        
+    }
+    .form-SignUp>div:nth-child(1)>p{
+        
+        text-align: center;
+        font-family: soleil, Helvetica, Arial, sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        color: #000000;
+    }
+    #country{
+        margin-left: 20px;
+        width: 338px;
+        height: 44px;
+        font-family: soleil, Helvetica, Arial, sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 13px;
+        line-height: 24px;
+        color: #000000;
+        padding-left: 3px;
+        padding-top: 5px;
+        border: 1px solid gray;
+    }
+    .showOutLine{
+        border:2px solid black
+    }
+    .test_cases_password{
+        margin-top: -10px;
+        width: 338px;
+        margin-left: 20px;
+        font-family: soleil, Helvetica, Arial, sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 13px;
+        line-height: 24px;
+       text-align: left;
+      display: none;
+    }
+    .test_cases_password2{
+        display: block;
+    }
+    ul {
+        list-style: none; /* Remove default bullets */
+      }
+      
+      ul li::before {
+        margin-left: -35px;
+       
+        color: #767676; 
+        font-weight: bold; 
+        display: inline-block; 
+        width: 1em; /* Also needed for space (tweak if needed) */
+       /* Also needed for space (tweak if needed) */
+       list-style: none;
+      }
+     .hey::before{
+        content:"\2713";
+     }
+    
+    
+    .selectcountryLabel{
+        position: absolute;
+        top: 200px;
+       
+        left: 18px;
+        padding-left: 9px;
+        font-size: 13px;
+        font-weight: 400;
+        letter-spacing: .3px;
+        color: #767676;
+        pointer-events: none;
+        
+    }
+    .selectcountryLabel2{
+        top:297px;
+    }
+    .bottom-country{
+        display: flex;
+        margin: 20px;
+      
+        justify-content: flex-start;
+       
+    }
+    .sign-up{
+        margin: 20px;
+        width: 333px;
+        margin-top: 40px;
+        
+    }
+    
+    .showSignUpArea{
+        top: 50%;
+        z-index: 10;
+        }
+       /* testcase checking signs  */
+        .tc1,.tc3,.tc4,.tc2{
+    color: red;
+        }
+        .tcdone{
+            color: blue;
+        }
