@@ -41,7 +41,6 @@ let TotalCartPrice=0
 for(let i=0;i<cartData.length;i++){
     TotalCartPrice+=cartData[i].price
 }
-console.log(TotalCartPrice)
 
 
 let tbody = document.querySelector("tbody")
@@ -90,6 +89,7 @@ const append = (data) => {
         plus.innerText=" +";
 
         let td3 = document.createElement("td")
+        td3.className="td3"
         td3.innerText = `INR ${count*el.price}`
 
         
@@ -102,6 +102,8 @@ const append = (data) => {
             td3.innerText = `INR ${count*el.price}`
             TotalCartPrice+=el.price
             console.log('TotalCartPrice:', TotalCartPrice)
+            document.querySelector(".ItemSubtotal").innerText=`INR ${TotalCartPrice}.00`
+            document.querySelector(".EstimateTotal").innerText=`INR ${TotalCartPrice+99}.00`
             CARTvalue++;
             itemCount.innerText=`[ ${CARTvalue} ]`;
             cartt.innerText=CARTvalue
@@ -115,6 +117,8 @@ const append = (data) => {
                 itemCount.innerText=`[ ${CARTvalue} ]`;
                 TotalCartPrice-=el.price
                 console.log('TotalCartPrice:', TotalCartPrice)
+                document.querySelector(".ItemSubtotal").innerText=`INR ${TotalCartPrice}.00`
+                document.querySelector(".EstimateTotal").innerText=`INR ${TotalCartPrice+99}.00`
                 cartt.innerText=CARTvalue
             }else{
             count--;
@@ -122,6 +126,8 @@ const append = (data) => {
             td3.innerText = `INR ${count*el.price}`;
             TotalCartPrice-=el.price
             console.log('TotalCartPrice:', TotalCartPrice)
+            document.querySelector(".ItemSubtotal").innerText=`INR ${TotalCartPrice}.00`
+            document.querySelector(".EstimateTotal").innerText=`INR ${TotalCartPrice+99}.00`
             CARTvalue--;
             itemCount.innerText=`[ ${CARTvalue} ]`;
             cartt.innerText=CARTvalue
@@ -147,3 +153,6 @@ function removeData(data,index){
     append(NSData)
     // localStorage.setItem("cartData",JSON.stringify(NSData))
 }
+
+document.querySelector(".ItemSubtotal").innerText=`INR ${TotalCartPrice}.00`
+document.querySelector(".EstimateTotal").innerText=`INR ${TotalCartPrice+99}.00`
