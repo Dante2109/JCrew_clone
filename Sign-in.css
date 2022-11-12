@@ -74,6 +74,19 @@
     }
     .eye-image-div{
     
+
+
+    text-align: center;
+    font-family: soleil, Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+}
+#country{
+    margin-left: 20px;
+    width: 338px;
     height: 44px;
     width: 49px;
     background-color: white;
