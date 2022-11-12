@@ -19,7 +19,7 @@
     font-family: "soleilregular";
     src: url(../fonts/soleil/SoleilRegular.otf);
 }
-.overlay{
+/* .overlay{
     width: 100%;
     position: fixed;
     top: 0%;
@@ -28,7 +28,7 @@
     opacity: 0;
     z-index: -3;
     transition: 1s;
-}
+} */
 .show-popup{
     opacity: 1;
     z-index: 1;
@@ -54,10 +54,7 @@
     margin-bottom: 30px;
     height: 42px;
 }
-a{
-    text-decoration: none;
-    color: rgb(1, 1, 185);
-}
+
 #submit{
     background-color: black;
     font-weight: 700;

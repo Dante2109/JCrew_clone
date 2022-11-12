@@ -20,10 +20,26 @@ export default ()=>{
   <div class="sign-in-btn">   <button class="sign-in-input-btn">SIGN IN NOW</button></div>
   <div class="terms">
   <p>This site is protected by reCAPTCHA and the Google<br>
-   <a href="https://policies.google.com/privacy"> Privacy Policy</a> and <a href="https://policies.google.com/terms">Terms of Service</a> apply.
+   <a style="
+  
+   font-family: soleil, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight:400;
+   font-size: 12px;
+   text-decoration:underline;
+   color: #767676" href="https://policies.google.com/privacy"> Privacy Policy</a> and <a style="
+  
+   font-family: soleil, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight:400;
+   font-size: 12px;
+   text-decoration:underline;
+   color: #767676"
+   
+    href="https://policies.google.com/terms">Terms of Service</a> apply.
   </p>
   </div>
-  <hr>
+  <hr style="color: #767676">
   <div class="signupinSignIn"><span>Don’t have an account?</span>&nbsp;<span class="signuplinkbtn">Sign up now</span></div>
   <div class="adminTextDiv"><span class="adminlogin">Admin LogIn</span> </div>
   </form>`
