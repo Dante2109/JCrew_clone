@@ -1,19 +1,17 @@
-body{
-    margin: 0;
-    padding: 0;
-}
+
 .overlay{
 width: 100%;
 position: fixed;
 top: 0%;
 height: 100vh;
-background-color: black;
+
+background: rgba(0, 0, 0, 0.35);
 opacity: 0;
-z-index: -2;
+z-index: -3;
 transition: 1s;
 }
 .showOverlay{
-    opacity: 0.5;
+    opacity: 1;
     z-index: 1;
 }
 .sign-in-area{
@@ -28,6 +26,7 @@ transition: 1s;
     transform: translate(-50%,-50%);
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
     transition: 2s;
+    border-radius: 5px;
 }
 .showSignInArea{
 top: 50%;
@@ -51,6 +50,7 @@ z-index: 4;
     line-height: 24px;
     color: #000000;
 }
+
 
 
 
@@ -131,6 +131,7 @@ cursor: pointer;
 .terms{
     margin: 20px;
     margin-top: 5px;
+    
     font-family: soleil, Helvetica, Arial, sans-serif;
     font-style: normal;
     font-weight:400;
@@ -138,7 +139,9 @@ cursor: pointer;
     line-height: 16px;
     color: #767676;
 }
-
+a{
+    color: #767676;
+}
 hr{
     margin: 20px;
     width: 333px;
@@ -230,6 +233,7 @@ left: 50%;
  transform: translate(-50%,-50%);
 box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 transition: 2s; 
+border-radius: 5px;
 }
 .sign-Up-Area-height-extend{
     height: 675px;
@@ -252,7 +256,7 @@ transition: 2s;
     color: #000000;
 }
 #country{
-    margin-left: 3px;
+    margin-left: 20px;
     width: 338px;
     height: 44px;
     font-family: soleil, Helvetica, Arial, sans-serif;
@@ -263,7 +267,6 @@ transition: 2s;
     color: #000000;
     padding-left: 3px;
     padding-top: 5px;
-    border: 1px solid gray;
 }
 .showOutLine{
     border:2px solid black

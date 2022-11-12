@@ -1,7 +1,4 @@
-body{
-    margin: 0px;
-    padding: 0px;
-}
+
 
 @font-face {
     font-family: "soleil";
@@ -22,7 +19,7 @@ body{
     font-family: "soleilregular";
     src: url(../fonts/soleil/SoleilRegular.otf);
 }
-.overlay{
+/* .overlay{
     width: 100%;
     position: fixed;
     top: 0%;
@@ -31,7 +28,7 @@ body{
     opacity: 0;
     z-index: -3;
     transition: 1s;
-}
+} */
 .show-popup{
     opacity: 1;
     z-index: 1;
@@ -57,10 +54,12 @@ body{
     margin-bottom: 30px;
     height: 42px;
 }
+
 .contactDeveloper{
     text-decoration: none;
     color: rgb(1, 1, 185);
 }
+
 #submit{
     background-color: black;
     font-weight: 700;
@@ -124,6 +123,7 @@ hr.grayline{
     font-size: 20px;
     text-align: center;
     margin-bottom: 0px;
+
 }
 #h3{
     font-family: "Bfp";
@@ -202,7 +202,9 @@ tr img{
     height: 120px;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
-.red{
+
+
+.reed{
     color: red;
     background-color: rgb(255, 236, 236);
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;

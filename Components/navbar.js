@@ -68,7 +68,7 @@ const navbar=()=>{
         <div class="dropdown-menu full">
             <div id="Women">
                     <div>
-                        <h2 class="BFP">Women</h2>
+                        <h2 class="BFP"> Women</h2>
                         <h5 class="bold">New Arrivals</h5>
                         <h5 class="bold red">Gifts</h5>
                         <h5 class="bold">Best Sellers</h5>
@@ -462,9 +462,16 @@ const navbar=()=>{
         </div>
     </div>
    
-    <div style="display:flex; justify-content:space-between; margin-right: 30px; width: 8%;">
-        <p class="sign-In-click"><a href="login.html">Signin</a></p>
-        <p><a href="cart.html">Cart </a><span id="cartt"></span></p>
+
+
+
+    <div id="bhasad" style="display:flex; justify-content:space-between; margin-right: 30px;">
+    <p id="Myaccount"></p>
+    <!-- change 1 -->
+   <p class="sign-In-click">Sign In</p>
+    <p><a href="cart.html"><i class="fa-light fa-bag-shopping"></i><span id="cartvalue"></span></a></p>
+    <p id="Logout"></p>
+
     </div>
 </div>`
 }
