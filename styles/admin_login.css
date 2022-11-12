@@ -202,9 +202,6 @@ tr img{
     height: 120px;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
-hr{
-    border-top: 1px solid rgb(255, 0, 0);
-}
 .red{
     color: red;
     background-color: rgb(255, 236, 236);

@@ -31,11 +31,17 @@ let cartData=[
     
 ]
 let itemCount = document.getElementById("itemCount")
-itemCount.innerText= cartData.length
+itemCount.innerText= `[ ${cartData.length} ]`
 let cartt = document.getElementById("cartt")
 cartt.innerText=cartData.length;
 let CARTvalue=cartData.length
 
+
+let TotalCartPrice=0
+for(let i=0;i<cartData.length;i++){
+    TotalCartPrice+=cartData[i].price
+}
+console.log(TotalCartPrice)
 
 
 let tbody = document.querySelector("tbody")
@@ -94,8 +100,10 @@ const append = (data) => {
             count++
             number.innerText=count;
             td3.innerText = `INR ${count*el.price}`
+            TotalCartPrice+=el.price
+            console.log('TotalCartPrice:', TotalCartPrice)
             CARTvalue++;
-            itemCount.innerText=CARTvalue;
+            itemCount.innerText=`[ ${CARTvalue} ]`;
             cartt.innerText=CARTvalue
             }
         })
@@ -104,14 +112,18 @@ const append = (data) => {
             if(count==1){
                 removeData(data,i)
                 CARTvalue--;
-                itemCount.innerText=CARTvalue;
+                itemCount.innerText=`[ ${CARTvalue} ]`;
+                TotalCartPrice-=el.price
+                console.log('TotalCartPrice:', TotalCartPrice)
                 cartt.innerText=CARTvalue
             }else{
             count--;
             number.innerText=count
             td3.innerText = `INR ${count*el.price}`;
+            TotalCartPrice-=el.price
+            console.log('TotalCartPrice:', TotalCartPrice)
             CARTvalue--;
-            itemCount.innerText=CARTvalue;
+            itemCount.innerText=`[ ${CARTvalue} ]`;
             cartt.innerText=CARTvalue
             }
         }
@@ -121,12 +133,6 @@ const append = (data) => {
         let td2 = document.createElement("td")
         td2.append(wrapper)
 // ************************************************************
-        // let td2 = document.createElement("td")
-        // td2.innerHTML = el.quantity
-
-
-        
-        
         tr.append(td1,td2,td3)
         tbody.append(tr)
     })
