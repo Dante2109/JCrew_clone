@@ -1,22 +1,30 @@
 import {navbar,transitions} from "../Components/navbar.js"
 document.getElementById("navbar").innerHTML=navbar()
+
+import footer from "../Components/footer.js"
+document.getElementById("footer").innerHTML = footer();
+
 transitions()
+// ---------------------------------------------------------------------------
 
 let cartData= JSON.parse(localStorage.getItem("cart"))
-console.log('cartData:', cartData)
+let cartvalue = JSON.parse(localStorage.getItem("cartvalue")) || 0
+let estimatedTotal = JSON.parse(localStorage.getItem("estimatedTotal")) || 0
 
+// ------------------------------------------------------------
 let itemCount = document.getElementById("itemCount")
 itemCount.innerText= `[ ${cartData.length} ]`
-// let cartt = document.getElementById("cartt")
-// cartt.innerText=cartData.length;
-let CARTvalue=cartData.length
-
+// let cartvalue = document.getElementById("cartvalue")
+// cartvalue.innerText=cartData.length;
+let TotalCartValue=cartData.length
 
 let TotalCartPrice=0
 for(let i=0;i<cartData.length;i++){
     TotalCartPrice+=cartData[i].price
 }
-
+localStorage.setItem("cartvalue",JSON.stringify(TotalCartValue))
+localStorage.setItem("estimatedTotal",JSON.stringify(TotalCartPrice+99))
+// ----------------------------------------------------------
 
 let tbody = document.querySelector("tbody")
 const append = (data) => {
@@ -24,16 +32,19 @@ const append = (data) => {
     data.forEach((el,i)=>{
         let count=1
         let tr =document.createElement("tr")
-
+        ////////////////////////////////////////////////////
         let img =document.createElement("img")
         img.src=el.image
-        // -------------------------------------------
+
         let name=document.createElement("p")
         name.innerText=el.name
+
         let description=document.createElement("p")
         description.innerText=el.description
+
         let size=document.createElement("p")
         size.innerText=`Size: ${el.size}`
+
         let remove=document.createElement("p")
         remove.innerText="Remove"
         remove.setAttribute("class","remove")
@@ -43,11 +54,13 @@ const append = (data) => {
         let des = document.createElement("div")
         des.setAttribute("id","des")
         des.append(name,description,size,remove)
-        // ---------------------------------------------
 
         let td1 = document.createElement("td")
-        td1.append(img,des)
         td1.setAttribute("id","td1")
+        td1.append(img,des)
+        ////////////////////////////////////////////////////////
+
+
 // *******************************************************
         let wrapper = document.createElement("div")
         wrapper.id="wrapper"
@@ -79,22 +92,26 @@ const append = (data) => {
             console.log('TotalCartPrice:', TotalCartPrice)
             document.querySelector(".ItemSubtotal").innerText=`INR ${TotalCartPrice}.00`
             document.querySelector(".EstimateTotal").innerText=`INR ${TotalCartPrice+99}.00`
-            CARTvalue++;
-            itemCount.innerText=`[ ${CARTvalue} ]`;
-            // cartt.innerText=CARTvalue
+            TotalCartValue++;
+            itemCount.innerText=`[ ${TotalCartValue} ]`;
+            localStorage.setItem("cartvalue",JSON.stringify(TotalCartValue))
+            localStorage.setItem("estimatedTotal",JSON.stringify(TotalCartPrice+99))
+            // cartvalue.innerText=TotalCartValue
             }
         })
 
         minus.onclick=()=>{
             if(count==1){
                 removeData(data,i)
-                CARTvalue--;
-                itemCount.innerText=`[ ${CARTvalue} ]`;
+                TotalCartValue--;
+                itemCount.innerText=`[ ${TotalCartValue} ]`;
                 TotalCartPrice-=el.price
                 console.log('TotalCartPrice:', TotalCartPrice)
                 document.querySelector(".ItemSubtotal").innerText=`INR ${TotalCartPrice}.00`
                 document.querySelector(".EstimateTotal").innerText=`INR ${TotalCartPrice+99}.00`
-                // cartt.innerText=CARTvalue
+                localStorage.setItem("cartvalue",JSON.stringify(TotalCartValue))
+                localStorage.setItem("estimatedTotal",JSON.stringify(TotalCartPrice+99))
+                // cartvalue.innerText=TotalCartValue
             }else{
             count--;
             number.innerText=count
@@ -103,9 +120,11 @@ const append = (data) => {
             console.log('TotalCartPrice:', TotalCartPrice)
             document.querySelector(".ItemSubtotal").innerText=`INR ${TotalCartPrice}.00`
             document.querySelector(".EstimateTotal").innerText=`INR ${TotalCartPrice+99}.00`
-            CARTvalue--;
-            itemCount.innerText=`[ ${CARTvalue} ]`;
-            // cartt.innerText=CARTvalue
+            TotalCartValue--;
+            itemCount.innerText=`[ ${TotalCartValue} ]`;
+            localStorage.setItem("cartvalue",JSON.stringify(TotalCartValue))
+            localStorage.setItem("estimatedTotal",JSON.stringify(TotalCartPrice+99))
+            // cartvalue.innerText=TotalCartValue
             }
         }
 
@@ -126,14 +145,10 @@ function removeData(data,index){
         return i!=index
     })
     append(NSData)
-    // localStorage.setItem("cartData",JSON.stringify(NSData))
+    localStorage.setItem("cart",JSON.stringify(NSData))
 }
 
 document.querySelector(".ItemSubtotal").innerText=`INR ${TotalCartPrice}.00`
 document.querySelector(".EstimateTotal").innerText=`INR ${TotalCartPrice+99}.00`
 
-///////////checkout page linking//////////////
-
-document.getElementById("cartCheckout").addEventListener("click",function(){
-    window.location.href="checkout.html"
-})
+localStorage.setItem("estimatedTotal",JSON.stringify(TotalCartPrice+99))

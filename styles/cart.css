@@ -80,11 +80,11 @@ img{
 #des{
     font-family: "soleilregular";
     font-size: 13px;
-    margin: 10px;
+    margin: 0px 10px;
     text-align: start;
 }
 #des p{
-    margin-bottom: 5px;
+    margin: 5px;
 }
 th{
     text-align: start;
@@ -96,11 +96,11 @@ th{
 }
 .im{
     padding-left: 10px;
+    padding-right: 350px;
 }
 .nm{
     width: 100px;
     text-align: center;
-    background: rgba(0, 0, 0, 0);
 }
 .pr{
     width: 80px;
@@ -110,14 +110,14 @@ td{
     text-align: center;
     border-bottom: 1px solid rgb(202, 202, 202);
 }
-.remove{
+#des .remove{
     text-decoration: underline;
     font-size: 12px;
     margin-top: 20px;
     cursor: pointer;
 }
 #wrapper span{
-    border-bottom: 1px solid rgb(202, 202, 202);
+    border-bottom: 1px solid rgb(138, 138, 138);
     padding: 2px 5px;
 }
 .plus, .minus{
@@ -142,7 +142,7 @@ ul> li{
     justify-content: space-between;
     font-family: "soleilregular";
     font-size: 12.5px;
-    margin: 5px 0px 12px 0px;
+    margin: 5px 0px 12px -40px;
 }
 li>div{
     margin-right: 1px;
@@ -153,16 +153,16 @@ li>div{
 .EstimateTotal{
     font-size: 15px;
 }
-#cartCheckout+p, #cartCheckout+p+p{
+#checkoutBtn+p, #checkoutBtn+p+p{
     text-align: start;
 }
-#cartCheckout+p{
+#checkoutBtn+p{
     font-family: "soleilBook";
     margin: 20px 0px 15px 0px;
     font-size: 13px;
     font-weight: 900;
 }
-#cartCheckout+p+p{
+#checkoutBtn+p+p{
     font-family: "soleil";
     font-size: 12px;
     line-height: 16px;
