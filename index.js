@@ -20,13 +20,18 @@ let logstatus=localStorage.getItem("loggedInstatus")
 let accountt=document.getElementById("Myaccount")
 let bhasad=document.getElementById("bhasad")
 let logout=document.getElementById("Logout")
-if(logstatus){
-    bhasad.style.width="18%"
+let signinvbtn=document.getElementById("SIGNINCLICK");
+if(logstatus=="true"){
+    bhasad.style.width="14%"
     accountt.innerText="My Account"
+    signinvbtn.innerText=null
+    signinvbtn.style.marginLeft="-30px"
     logout.innerText="Logout"
     logout.onclick  =()=>{
         Logout()
     }
+    logout.style.cursor="pointer"
+    accountt.style.cursor="pointer"
 }
 
 let Logout=()=>{
@@ -36,4 +41,5 @@ let Logout=()=>{
     bhasad.style.width="8%";
     accountt.innerHTML=null;
     logout.innerHTML=null;
+    signinvbtn.innerText="Sign In"
 }

@@ -131,3 +131,9 @@ function removeData(data,index){
 
 document.querySelector(".ItemSubtotal").innerText=`INR ${TotalCartPrice}.00`
 document.querySelector(".EstimateTotal").innerText=`INR ${TotalCartPrice+99}.00`
+
+///////////checkout page linking//////////////
+
+document.getElementById("cartCheckout").addEventListener("click",function(){
+    window.location.href="checkout.html"
+})

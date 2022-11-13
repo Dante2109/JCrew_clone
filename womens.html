@@ -6,9 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Womens Page</title>
     <link rel="stylesheet" href="styles/womens.css">
+    <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="stylesheet" href="Sign-in.css">
+    <link rel="stylesheet" href="./styles/admin_login.css">  
+    <link
+    rel="stylesheet"
+    href="https://site-assets.fontawesome.com/releases/v6.1.1/css/all.css"
+    />
 </head>
 <body>
-    <p id="head">SHOP ALL WOMEN'S CLOTHING</p>
+    <div id="navbar"></div>
+    <div class="overlay"></div>
+    <div class="sign-in-area"></div>
+    <div class="sign-Up-Area"></div>
+    <form class="admin-login"></form>
+    <div id="background"></div>
+    <p style="margin-top:100px" id="head">SHOP ALL WOMEN'S CLOTHING</p>
     <select name="Featured" id="SortbyPrice">
         <option value="Featured" >Featured</option>
         <option value="Price:High to low">Price:High to low</option>
@@ -21,6 +34,26 @@
     </select>
     <div id="box">
     </div>
+    <div style="margin-top:100px" id="sec12">
+        <div id="scIcons">
+            <div>
+                <i class="fa-brands fa-twitter"></i>
+                <p>@jcrew_help</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-phone"></i>
+                <p>1434 385 5775</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-envelope"></i>
+                <p>Email Us</p>
+            </div>
+        </div>
+    </div>
+    <div id="footer"></div>
 </body>
 </html>
-<script src="scripts/womens.js"></script>
+<script type="module" src="scripts/womens.js"></script>
+<script type="module" src="./Sign-in.js"></script>
+<script type="module" src="./Auth-Component/admin_login_component.js"></script>
+<script type="module" src="./scripts/admin_login.js"></script>
