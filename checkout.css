@@ -255,19 +255,19 @@
 #bx2 { 
     border: 1px solid rgb(190, 190, 190);
     width: 45%;
-    height: 400px;
+    height: auto;
     background-color: #ffffff;
     padding: 10px;
 }
 
 #pay1 { 
-    width: 90%;
+    width: 80%;
     margin: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 50px;
-    padding: 15px;
+    padding-top: 15px;
     background-color: #ffffff;
 }
 
@@ -304,14 +304,46 @@
 }
 
 #appendCart { 
-    width: 90%;
+    width: 80%;
     margin: auto;
-    padding: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 15px;
 }
+
+#majorDiv { 
+    display:flex;
+    gap: 10px;
+    background-color: #ffffff;
+}
+
+#immmage {
+    width: 100%;
+}
+
+#mainDIVid { 
+    width: 34%;
+    display: flex;
+}
+
+#mainDIVid2 {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+}
+
+#mainDIVid2 > p {
+    background-color: #ffffff;
+    font-family: sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+}
+
 
 #pay2 { 
     width: 90%;
@@ -346,6 +378,16 @@
     color: #0161ff;
 }
 
+#pay2 > button > a {
+    text-decoration: none;
+    color: #000;
+    background-color: #ffffff;
+}
+
+#pay2 > button > a:hover {
+    color: #0161ff;
+}
+
 #bx2 > hr { 
     width: 85%;
     margin: auto;
@@ -359,8 +401,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 7px;
-    height: 35px;
     background-color: #ffffff;
 }
 
@@ -379,8 +419,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 7px;
-    height: 35px;
     background-color: #ffffff;
     margin-bottom: 50px;
 }
