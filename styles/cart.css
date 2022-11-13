@@ -84,6 +84,9 @@ body{
     margin: 5px;
     padding-right: 50px;
 }
+.table{
+    width: 100%;
+}
 .table th{
     text-align: start;
     border-bottom: 1px solid rgb(202, 202, 202);
