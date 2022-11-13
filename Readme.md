@@ -52,7 +52,7 @@ This features of this project are :
 <br>
 <br>
 
-### Site we have made - <a href="">Take me there 👉🏼</a>
+### Site we have made - <a href="https://acras.netlify.app/">Take me there 👉🏼</a>
 
 <br>
 
@@ -60,7 +60,7 @@ This features of this project are :
 
 <br>
 
-### Video Presentation Link - <a href="">Watch the presentation</a>
+### Video Presentation Link - <a href="https://drive.google.com/drive/u/9/folders/1BbRYV-KCgyUO14DCBY99uMR5677L3Ebe">Watch the presentation</a>
 
 <br>
 
