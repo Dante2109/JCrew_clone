@@ -186,3 +186,13 @@ let Logout=()=>{
     logout.innerHTML=null;
     signinvbtn.innerText="Sign In"
 }
+
+if(cartvalue==0){
+    document.querySelector(".Shipping").innerText=`INR 0.00`
+    document.querySelector(".EstimateTotal").innerText=`INR 0.00`;
+    let butttton=document.getElementById("checkoutBtn");
+    butttton.onclick=(event)=>{
+        alert("Your cart is empty! Please add items to your Cart");
+        event.preventDefault()
+    }  
+}

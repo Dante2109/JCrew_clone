@@ -43,6 +43,7 @@ function showckProd() {
 
 showckProd();
 
+let total1=localStorage.getItem("estimatedTotal");
 
 document.getElementById("paybtn").addEventListener("click",makepay) 
 
@@ -54,4 +55,60 @@ function makepay () {
       alert("Thank you for shopping with us. Your order is being Packed and will be delivered shortly.");
       window.location = "index.html";
     }, 3000);
+    localStorage.setItem("estimatedTotal",0);
+    localStorage.setItem("cart",JSON.stringify([]));
+    localStorage.setItem("cartvalue",0);
+
+}
+document.getElementById("deliveryCount").innerText="INR 1710.00"
+
+
+
+document.getElementById("itemsCount").innerText=`INR ${total1}.00`
+document.getElementById("itemsCount").style.fontWeight="700"
+
+document.getElementById("totalCost").innerText=`INR ${+total1+1710}.00`
+
+
+document.querySelector("#std").addEventListener("click",()=>{
+    document.querySelector("#std").checked=true;
+document.querySelector("#exp").checked=false;
+if(localStorage.getItem("cartvalue")==0){
+
+    document.getElementById("deliveryCount").innerText="INR 0.00";
+
+    document.getElementById("totalCost").innerText=`INR 0.00`;
+    document.getElementById("itemsCount").innerText="0";
+}else{
+ 
+document.getElementById("deliveryCount").innerText="INR 1710.00"
+document.getElementById("totalCost").innerText=`INR ${+total1+1710}.00`   
+}
+})
+
+
+document.querySelector("#exp").addEventListener("click",()=>{
+    document.querySelector("#std").checked=false;
+document.querySelector("#exp").checked=true;
+if(localStorage.getItem("cartvalue")==0){
+
+    document.getElementById("deliveryCount").innerText="INR 0.00";
+
+    document.getElementById("totalCost").innerText=`INR 0.00`;
+    document.getElementById("itemsCount").innerText="0";
+}else{
+
+document.getElementById("deliveryCount").innerText="INR 2050.00"
+
+document.getElementById("totalCost").innerText=`INR ${+total1+2050}.00`
+}
+
+})
+
+if(localStorage.getItem("cartvalue")==0){
+
+    document.getElementById("deliveryCount").innerText="INR 0.00";
+
+    document.getElementById("totalCost").innerText=`INR 0.00`;
+    document.getElementById("itemsCount").innerText="0";
 }
