@@ -3,7 +3,6 @@ import {removeSignInArea} from "../Sign-in.js"
 let admin_Password = "admin@acras"
 let admin_Email = "admin@acras.com"
 
-
 const adminLogIn = (el) => {
     el.preventDefault()
     

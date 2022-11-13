@@ -58,7 +58,6 @@ const append = (data) => {
         let td1 = document.createElement("td")
         td1.setAttribute("id","td1")
         td1.append(img,des)
-        ////////////////////////////////////////////////////////
 
 
 // *******************************************************
