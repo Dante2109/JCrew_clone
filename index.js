@@ -43,3 +43,6 @@ let Logout=()=>{
     logout.innerHTML=null;
     signinvbtn.innerText="Sign In"
 }
+
+ let carttvaluee=localStorage.getItem("cartvalue") || 0;
+ document.getElementById("cartvalue").innerText=carttvaluee

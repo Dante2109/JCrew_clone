@@ -225,3 +225,10 @@ body{
 #bhasad{
     width: 8%;
 }
+#cartvalue{
+    padding: 0px 5px;
+    margin-left: 5px;
+    color: crimson;
+    border-radius: 30px;
+    font-family: "soleilBold";
+}
