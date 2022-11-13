@@ -14,9 +14,9 @@ let estimatedTotal = JSON.parse(localStorage.getItem("estimatedTotal")) || 0
 // ------------------------------------------------------------
 let itemCount = document.getElementById("itemCount")
 itemCount.innerText= `[ ${cartData.length} ]`
-// let cartvalue = document.getElementById("cartvalue")
 // cartvalue.innerText=cartData.length;
 let TotalCartValue=cartData.length
+document.getElementById("cartvalue").innerText=TotalCartValue
 
 let TotalCartPrice=0
 for(let i=0;i<cartData.length;i++){
@@ -94,6 +94,7 @@ const append = (data) => {
             document.querySelector(".EstimateTotal").innerText=`INR ${TotalCartPrice+99}.00`
             TotalCartValue++;
             itemCount.innerText=`[ ${TotalCartValue} ]`;
+            document.getElementById("cartvalue").innerText=TotalCartValue
             localStorage.setItem("cartvalue",JSON.stringify(TotalCartValue))
             localStorage.setItem("estimatedTotal",JSON.stringify(TotalCartPrice+99))
             // cartvalue.innerText=TotalCartValue
@@ -103,13 +104,13 @@ const append = (data) => {
         minus.onclick=()=>{
             if(count==1){
                 removeData(data,i)
-                TotalCartValue--;
-                itemCount.innerText=`[ ${TotalCartValue} ]`;
+
                 TotalCartPrice-=el.price
                 console.log('TotalCartPrice:', TotalCartPrice)
                 document.querySelector(".ItemSubtotal").innerText=`INR ${TotalCartPrice}.00`
                 document.querySelector(".EstimateTotal").innerText=`INR ${TotalCartPrice+99}.00`
                 localStorage.setItem("cartvalue",JSON.stringify(TotalCartValue))
+                document.getElementById("cartvalue").innerText=TotalCartValue
                 localStorage.setItem("estimatedTotal",JSON.stringify(TotalCartPrice+99))
                 // cartvalue.innerText=TotalCartValue
             }else{
@@ -123,6 +124,7 @@ const append = (data) => {
             TotalCartValue--;
             itemCount.innerText=`[ ${TotalCartValue} ]`;
             localStorage.setItem("cartvalue",JSON.stringify(TotalCartValue))
+            document.getElementById("cartvalue").innerText=TotalCartValue
             localStorage.setItem("estimatedTotal",JSON.stringify(TotalCartPrice+99))
             // cartvalue.innerText=TotalCartValue
             }
@@ -146,6 +148,7 @@ function removeData(data,index){
     })
     TotalCartValue--
     itemCount.innerText=`[ ${TotalCartValue} ]`;
+    document.getElementById("cartvalue").innerText=TotalCartValue
     localStorage.setItem("cartvalue",JSON.stringify(TotalCartValue))
     append(NSData)
     localStorage.setItem("cart",JSON.stringify(NSData))
@@ -155,3 +158,32 @@ document.querySelector(".ItemSubtotal").innerText=`INR ${TotalCartPrice}.00`
 document.querySelector(".EstimateTotal").innerText=`INR ${TotalCartPrice+99}.00`
 
 localStorage.setItem("estimatedTotal",JSON.stringify(TotalCartPrice+99))
+
+/////////////////////////////////////////////////////////////////////////////////
+let logstatus=localStorage.getItem("loggedInstatus")
+let accountt=document.getElementById("Myaccount")
+let bhasad=document.getElementById("bhasad")
+let logout=document.getElementById("Logout")
+let signinvbtn=document.getElementById("SIGNINCLICK");
+if(logstatus=="true"){
+    bhasad.style.width="14%"
+    accountt.innerText="My Account"
+    signinvbtn.innerText=null
+    signinvbtn.style.marginLeft="-30px"
+    logout.innerText="Logout"
+    logout.onclick  =()=>{
+        Logout()
+    }
+    logout.style.cursor="pointer"
+    accountt.style.cursor="pointer"
+}
+
+let Logout=()=>{
+    console.log("akjfahkjalhfsj")
+    let loggedInstatus=false;
+    localStorage.setItem('loggedInstatus',JSON.stringify(loggedInstatus));
+    bhasad.style.width="8%";
+    accountt.innerHTML=null;
+    logout.innerHTML=null;
+    signinvbtn.innerText="Sign In"
+}

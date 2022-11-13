@@ -493,4 +493,7 @@ document.addEventListener("click", e =>{
     })
 })
 }
+//  let carttvaluee=localStorage.getItem("cartvalue") || 0;
+//  document.getElementById("cartvalue").innerText=carttvaluee
+
 export {navbar,transitions}

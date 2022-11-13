@@ -3,7 +3,7 @@ import { navbar,transitions } from "../Components/navbar.js";
 
 import footer from "../Components/footer.js"
 document.getElementById("footer").innerHTML = footer();
-
+let carttvaluee=localStorage.getItem("cartvalue") || 0;
 
 let navbar_div=document.getElementById("navbar");
 navbar_div.innerHTML=navbar()
@@ -333,7 +333,11 @@ var mensData = [
       storeData(el.image,el.description,el.name,el.price,size_value);
       size_XS.style.fontWeight="400";
       size_XS.style.border="1px solid gray";
-      size_value=false
+      size_value=false;
+      carttvaluee++
+      localStorage.setItem("cartvalue",carttvaluee);
+      document.getElementById("cartvalue").innerText=carttvaluee
+
       }else{
         alert("Please Select the Size of the product")
       }
@@ -400,3 +404,7 @@ var mensData = [
       display(mensData)
      }
     }
+
+
+  
+    document.getElementById("cartvalue").innerText=carttvaluee
