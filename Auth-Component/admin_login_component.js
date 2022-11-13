@@ -4,7 +4,6 @@ export default ()=>{
     <input type="email" id="adminEmail" placeholder="Email Address*">
     <input type="password" id="adminPassword" placeholder="Password*">
 
-    <p>Forgot Password : <a class="contactDeveloper" href="https://mail.google.com/mail/?view=cm&fs=1&to=developer@acras.com" target="_blank">Contact To Developer</a></p>
     <p>Forgot Password : <a style="
   
     font-family: soleil, Helvetica, Arial, sans-serif;
