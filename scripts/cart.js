@@ -144,6 +144,9 @@ function removeData(data,index){
     let NSData= data.filter((el,i)=>{
         return i!=index
     })
+    TotalCartValue--
+    itemCount.innerText=`[ ${TotalCartValue} ]`;
+    localStorage.setItem("cartvalue",JSON.stringify(TotalCartValue))
     append(NSData)
     localStorage.setItem("cart",JSON.stringify(NSData))
 }
