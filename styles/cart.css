@@ -69,9 +69,6 @@ body{
     display: flex;
     justify-content: space-between;
 }
-.imAg{
-    width: 110px;
-}
 #td1{
     display: flex;
     padding: 10px;
@@ -85,8 +82,9 @@ body{
 }
 #des p{
     margin: 5px;
+    padding-right: 50px;
 }
-th{
+.table th{
     text-align: start;
     border-bottom: 1px solid rgb(202, 202, 202);
     padding: 3px 0px;
@@ -94,21 +92,29 @@ th{
     font-size: 12px;
     color: rgb(97, 96, 96);
 }
-.im{
+.table .im{
     padding-left: 10px;
     padding-right: 350px;
 }
-.nm{
+.table .nm{
     width: 100px;
     text-align: center;
 }
-.pr{
+.table .pr{
     width: 80px;
     text-align: center;
 }
-td{
+.table td{
     text-align: center;
     border-bottom: 1px solid rgb(202, 202, 202);
+}
+.table .td3{
+    font-size: 15px;
+}
+.table tr img{
+    width: 100px;
+    height: 110px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 #des .remove{
     text-decoration: underline;
@@ -137,14 +143,14 @@ td{
     background: #000;
 }
 
-ul> li{
+#checkout ul> li{
     display: flex;
     justify-content: space-between;
     font-family: "soleilregular";
     font-size: 12.5px;
     margin: 5px 0px 12px -40px;
 }
-li>div{
+#checkout li>div{
     margin-right: 1px;
 }
 .Shipping, .ItemSubtotal{
@@ -169,7 +175,4 @@ li>div{
     font-weight: 500;
     color: rgb(107, 107, 107);
     margin-bottom: 25px;
-}
-.td3{
-    font-size: 15px;
 }
