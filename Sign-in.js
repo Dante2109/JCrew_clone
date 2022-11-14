@@ -444,7 +444,8 @@ const userSignIn=()=>{
     let arr=JSON.parse(localStorage.getItem("userCredentials"))||[];
    let inputemail=document.querySelector(".emailLogIn").value;
    let inputpassword=document.querySelector(".logpasswordShow").value;
-   credentialCheck(inputemail,inputpassword,arr)
+   if(inputemail!=""&&inputpassword!="")
+  {credentialCheck(inputemail,inputpassword,arr);}
    
 }
 //email and password verification for logIn=======================================================================

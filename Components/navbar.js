@@ -1,10 +1,10 @@
 const navbar=()=>{
     return `<div id="navbar2">
-    <a href="index.html"><img src="https://searchlogovector.com/wp-content/uploads/2021/11/jcrew-logo-vector.png" alt=""></a>
+    <a href="index.html"><img style="margin-top:5px" src="./readmePhotos/ACRAS-navbar-logo.png" alt=""></a>
     <div class="dropdown data-dropdown">
         <p class="link data-dropdown-button">Gifts</p>
         <div class="dropdown-menu">
-            <div>
+            <div style="padding:0px;border:1px solid">
                     <!-- <div class="ddiv1"> -->
                         <div class="Gifts">
                             <h3 class="BFP">Gifts</h3>
@@ -68,7 +68,7 @@ const navbar=()=>{
         <div class="dropdown-menu full">
             <div id="Women">
                     <div>
-                        <h2 class="BFP"> Women</h2>
+                    <a href="./womens.html"><h2 class="BFP">Women</h2></a>
                         <h5 class="bold">New Arrivals</h5>
                         <h5 class="bold red">Gifts</h5>
                         <h5 class="bold">Best Sellers</h5>
@@ -142,7 +142,7 @@ const navbar=()=>{
                         </div>
                     </div>
                 </div>
-                <div style="background-color:#b9b9b9;color:rgb(48, 47, 47); padding:0px 10px; display: flex;justify-content: space-around;">
+                <div style="background-color:#b9b9b9;color:rgb(48, 47, 47); padding:0px 0px; display: flex;justify-content: space-around;">
                     <h2 style="display: inline;font-family: bfp;">Shop By Occassion</h2>
                     <h4 style="display: inline;margin-top: 28px;">For Parties</h4>
                     <h4 style="display: inline;margin-top: 28px;">For Vacation</h4>
@@ -156,7 +156,7 @@ const navbar=()=>{
         <div class="dropdown-menu full">
             <div id="Men">
                     <div>
-                        <h2 class="BFP">Men</h2>
+                    <a href="./mens.html"><h2 class="BFP">Men</h2></a>
                         <h5 class="bold">New Arrivals</h5>
                         <h5 class="bold red">Gifts</h5>
                         <h5 class="bold">Best Sellers</h5>
@@ -334,7 +334,7 @@ const navbar=()=>{
     <div class="dropdown data-dropdown">
         <p class="link data-dropdown-button">Cashmere</p>
         <div class="dropdown-menu">
-            <div>
+            <div style="padding:0px;border:1px solid">
                         <div class="Gifts">
                             <h3 class="BFP">Shop Cashmere</h3>
                             <h5>For Women</h5>
@@ -468,7 +468,7 @@ const navbar=()=>{
     <div id="bhasad" style="display:flex; justify-content:space-between; margin-right: 30px;">
     <p id="Myaccount"></p>
     <!-- change 1 -->
-   <p class="sign-In-click">Sign In</p>
+   <p id="SIGNINCLICK" class="sign-In-click">Sign In</p>
     <p><a href="cart.html"><i class="fa-light fa-bag-shopping"></i><span id="cartvalue"></span></a></p>
     <p id="Logout"></p>
 
@@ -493,4 +493,7 @@ document.addEventListener("click", e =>{
     })
 })
 }
+//  let carttvaluee=localStorage.getItem("cartvalue") || 0;
+//  document.getElementById("cartvalue").innerText=carttvaluee
+
 export {navbar,transitions}

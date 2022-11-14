@@ -1,40 +1,92 @@
+/////////////////Navbar and footer////////////////////
+import { navbar,transitions } from "../Components/navbar.js";
+
+import footer from "../Components/footer.js"
+document.getElementById("footer").innerHTML = footer();
+
+let carttvaluee=localStorage.getItem("cartvalue") || 0;
+
+let navbar_div=document.getElementById("navbar");
+navbar_div.innerHTML=navbar()
+transitions()
+
+
+let footerinput=document.getElementById("footerinput").value
+let footerbutton=document.getElementById("footerbutton");
+footerbutton.addEventListener("click",function(){
+  alert("You are signed successfull for regular updates from J.Crew")
+})
+
+let logstatus=localStorage.getItem("loggedInstatus")
+let accountt=document.getElementById("Myaccount")
+let bhasad=document.getElementById("bhasad")
+let logout=document.getElementById("Logout")
+let signinvbtn=document.getElementById("SIGNINCLICK");
+if(logstatus=="true"){
+    bhasad.style.width="14%"
+    accountt.innerText="My Account"
+    signinvbtn.innerText=null
+    signinvbtn.style.marginLeft="-30px"
+    logout.innerText="Logout"
+    logout.onclick  =()=>{
+        Logout()
+    }
+    logout.style.cursor="pointer"
+    accountt.style.cursor="pointer"
+}
+
+
+let Logout=()=>{
+    console.log("akjfahkjalhfsj")
+    let loggedInstatus=false;
+    localStorage.setItem('loggedInstatus',JSON.stringify(loggedInstatus));
+    bhasad.style.width="8%";
+    accountt.innerHTML=null;
+    logout.innerHTML=null;
+    signinvbtn.innerText="Sign In"
+}
+
+///////////////////Navbar and footer//////////////////////////////
+
+
+
 var womensData = [
 
     {
       image:
         "https://www.jcrew.com/s7-img-facade/AS297_GR7081_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=540&hei=540",
-        description:"NEW COLOR",
-        name: "Vintage long-sleeve T-shirt",
+        name:"T-Shirt",
+        description: "Vintage long-sleeve T-shirt",
       price:  2696,
       
     },
     {
       image:
         "https://www.jcrew.com/s7-img-facade/BF355_PK6709_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=540&hei=540",
-        description:"NEW COLOR",
-         name: "Slim perfect-fit T-shirt",
+        name:"New Shirt",
+        description: "Slim perfect-fit T-shirt",
         price: 4146,
     },
     {
       image:
         "https://www.jcrew.com/s7-img-facade/BH925_RD5371_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=540&hei=540",
-        description:"BEST SELLER",
-        name: "New favorite tank top ",
+        name:"Top",
+        description: "New favorite tank top ",
       price: 1399,
     },
     {
       image:
         "https://www.jcrew.com/s7-img-facade/BL022_RD5745?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=480&hei=480",
-        description:"NEW COLOR",
-        name: "Tissue turtleneck",
+        name:"Sweater",
+        description: "Tissue turtleneck",
       price: 4699,
 
     },
     {
       image:
         "https://www.jcrew.com/s7-img-facade/BM342_GR7105_d2?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=540&hei=540",
-        description:"BEST COLOR",
-        name: "Perfect-fit turtleneck ",
+        name:"jacket",
+        description: "Perfect-fit turtleneck ",
       price: 10499,
       type:"women"
 
@@ -42,8 +94,8 @@ var womensData = [
     {
       image:
         "https://www.jcrew.com/s7-img-facade/BM948_NA7294?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=480&hei=480",
-        description:"NEW COLOR",
-         name: "New chateau parka ",
+        name:"Sweater",
+        description: "New chateau parka ",
       price: 21999,
       type:"women"
    
@@ -51,8 +103,8 @@ var womensData = [
     {
       image:
         "https://www.jcrew.com/s7-img-facade/BL022_WT0002_d1?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=540&hei=540",
-        description:"NEW  COLOR",
-       name: "Tissue turtleneck",
+        name:"jacket",
+        description: "Tissue turtleneck",
       price: 7699,
       type:"women"
  
@@ -60,135 +112,135 @@ var womensData = [
     {
       image:
         "https://www.jcrew.com/s7-img-facade/BC108_BK0001?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=480&hei=480",
-        description:"NEW COLOR",
-        name: "Ruched one-shoulder one-piece",
+        name:"Shoulder piece",
+        description: "Ruched one-shoulder one-piece",
       price: 7299,
       type:"women"
     },
     {
         image:
           "https://www.jcrew.com/s7-img-facade/BK251_BK0001_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=540&hei=540",
-          description:"NEW COLOR",
-          name: "Kate straight-leg pant",
+          name:"pant",
+          description: "Kate straight-leg pant",
         price: 13299,
         type:"women"
       },
       {
         image:
           "https://www.jcrew.com/s7-img-facade/BM534_NA6434_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=540&hei=540",
-          description:"NEW COLOR",
-          name: "New Perfect Winter parka",
+          name:"Parka",
+          description: "New Perfect Winter parka",
         price: 23999,
         type:"women"
       },
       {
         image:
           "https://www.jcrew.com/s7-img-facade/BK728_RD6052_d2?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=540&hei=540",
-          description:"NEW COLOR",
-          name: "Sequin mini skirt",
+          name:"Skirt",
+          description: "Sequin mini skirt",
         price: 3299,
         type:"women"
       },
       {
         image:"https://www.jcrew.com/s7-img-facade/BM897_SR0399_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=540&hei=540",
-          description:"NEW COLOR",
-          name: "Fair Isle sweater-skirt",
+        name:"Sweater",
+        description: "Fair Isle sweater-skirt",
         price: 7999,
         type:"women"
       },
       {
         image:
           "https://www.jcrew.com/s7-img-facade/BM779_NA6434_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=540&hei=540",
-          description:"NEW COLOR",
-          name: "Ribbed pom-pom beanie",
+          name:"Beanie",
+          description: "Ribbed pom-pom beanie",
         price: 13299,
         type:"women"
       },
       {
         image:
           "https://www.jcrew.com/s7-img-facade/BM299_NA6821?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=480&hei=480",
-          description:"NEW COLOR",
-          name: "Half-zip stretch wool sweater",
+          name:"Wool Sweater",
+          description: "Half-zip stretch wool sweater",
         price: 13299,
         type:"women"
       },
       {
         image:
           "https://www.jcrew.com/s7-img-facade/BM538_WT0002_d7?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=540&hei=540",
-          description:"NEW COLOR",
-          name: "New chateau puffer coat",
+          name:"Coat",
+          description: "New chateau puffer coat",
         price: 13299,
         type:"women"
       },
       {
         image:
           "https://www.jcrew.com/s7-img-facade/BM165_BL6622_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=540&hei=540",
-          description:"NEW COLOR",
-          name: "Cable-knit rollneck sweater",
+          name:"Sweater",
+          description: "Cable-knit rollneck sweater",
         price: 13299,
         type:"women"
       },
       {
         image:
           "https://www.jcrew.com/s7-img-facade/BM692_EE3244?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=540&hei=540",
-          description:"NEW COLOR",
-          name: "Colette mule heels",
+          name:"Heels",
+          description: "Colette mule heels",
         price: 13299,
         type:"women"
       },
       {
         image:
           "https://www.jcrew.com/s7-img-facade/BD613_SU3958_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=540&hei=540",
-          description:"NEW COLOR",
-          name: "Rollneck sweater in Supersoft yarn",
+          name:"Yarn",
+          description: "Rollneck sweater in Supersoft yarn",
         price: 13299,
         type:"women"
       },
       {
         image:
           "https://www.jcrew.com/s7-img-facade/H1891_EE1584?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=480&hei=480",
-          description:"NEW COLOR",
-          name: "Perfect Winter boots with shearling",
+          name:"Boots",
+          description: "Perfect Winter boots with shearling",
         price: 13299,
         type:"women"
       },
       {
         image:
           "https://www.jcrew.com/s7-img-facade/BM179_SR0404_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=540&hei=540",
-          description:"NEW COLOR",
-          name: "Fair Isle mockneck pullover sweater",
+          name:"sweater",
+          description: "Fair Isle mockneck pullover sweater",
         price: 13299,
         type:"women"
       },
       {
         image:
           "https://www.jcrew.com/s7-img-facade/BM301_SR0554_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=540&hei=540",
-          description:"NEW COLOR",
-          name: "Cable-knit mockneck pullover in stripe with",
+          name:"sweater",
+          description: "Cable-knit mockneck pullover in stripe with",
         price: 13299,
         type:"women"
       },
       {
         image:
           "https://www.jcrew.com/s7-img-facade/BM838_RD5371_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=540&hei=540",
-          description:"NEW COLOR",
-          name: "Florence convertible clutch ",
+          name:"Clutch",
+          description: "Florence convertible clutch ",
         price: 13299,
         type:"women"
       },
       {
         image:
           "https://www.jcrew.com/s7-img-facade/BN125_GR7084_d2?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=540&hei=540",
-          description:"NEW COLOR",
-          name: "Velvet jeweled button-fron",
+          name:"skirt",
+          description: "Velvet jeweled button-fron",
         price: 13299,
         type:"women"
       },
       {
         image:
           "https://www.jcrew.com/s7-img-facade/BM349_BK0001_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=540&hei=540",
-          description:"NEW COLOR",
-          name: "Feather-trim long-sleeve shirt",
+          name:"Sleeve Shirt",
+          description: "Feather-trim long-sleeve shirt",
         price: 13299,
         type:"women"
       },
@@ -285,7 +337,10 @@ var womensData = [
       storeData(el.image,el.description,el.name,el.price,size_value);
       size_XS.style.fontWeight="400";
       size_XS.style.border="1px solid gray";
-      size_value=false
+      size_value=false;
+      carttvaluee++
+      localStorage.setItem("cartvalue",carttvaluee);
+      document.getElementById("cartvalue").innerText=carttvaluee
       }else{
         alert("Please Select the Size of the product")
       }
@@ -301,11 +356,11 @@ var womensData = [
   
   function storeData(productImg,name,special,price,sie_value){
    let obj={
-    productImg,
-    name,
-    special,
-    price,
-    sie_value,
+    image:productImg,
+    name:name,
+    description:special,
+    price:price,
+    size:sie_value,
    }
    let NSdata = JSON.parse(localStorage.getItem("cart")) || [];
    console.log(NSdata)
@@ -354,3 +409,6 @@ var womensData = [
       display(womensData)
      }
     }
+
+
+    document.getElementById("cartvalue").innerText=carttvaluee

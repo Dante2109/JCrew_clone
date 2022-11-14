@@ -1,48 +1,30 @@
 import {navbar,transitions} from "../Components/navbar.js"
 document.getElementById("navbar").innerHTML=navbar()
-transitions()
 
-let cartData=[
-    {
-        image: "https://www.jcrew.com/s7-img-facade/BJ706_YD2387?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=480&hei=480",
-        name: "Shirt1",
-        description: "Secret Wash cotton poplin shirt",
-        size: "XI",
-        quantity:2,
-        price: 7699,
-      
-    },
-    {
-        image: "https://www.jcrew.com/s7-img-facade/BJ705_WX4266?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=480&hei=480",
-        name:"Shirt2",
-        description: "Secret Wash cotton poplin shirt",
-        size: "XI",
-        quantity:2,
-        price: 9499,
-    },
-    {
-        image: "https://www.jcrew.com/s7-img-facade/BE996_YD2386?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=480&hei=480",
-        name:"Shirt3",
-        description: "mens Broken-in organic cotton oxford shirt",
-        size: "XI",
-        quantity:2,
-        price: 7399,
-    },
-    
-]
+import footer from "../Components/footer.js"
+document.getElementById("footer").innerHTML = footer();
+
+transitions()
+// ---------------------------------------------------------------------------
+
+let cartData= JSON.parse(localStorage.getItem("cart"))
+let cartvalue = JSON.parse(localStorage.getItem("cartvalue")) || 0
+let estimatedTotal = JSON.parse(localStorage.getItem("estimatedTotal")) || 0
+
+// ------------------------------------------------------------
 let itemCount = document.getElementById("itemCount")
 itemCount.innerText= `[ ${cartData.length} ]`
-let cartt = document.getElementById("cartt")
-cartt.innerText=cartData.length;
-let CARTvalue=cartData.length
-
+// cartvalue.innerText=cartData.length;
+let TotalCartValue=cartData.length
+document.getElementById("cartvalue").innerText=TotalCartValue
 
 let TotalCartPrice=0
 for(let i=0;i<cartData.length;i++){
     TotalCartPrice+=cartData[i].price
 }
-console.log(TotalCartPrice)
-
+localStorage.setItem("cartvalue",JSON.stringify(TotalCartValue))
+localStorage.setItem("estimatedTotal",JSON.stringify(TotalCartPrice+99))
+// ----------------------------------------------------------
 
 let tbody = document.querySelector("tbody")
 const append = (data) => {
@@ -50,16 +32,19 @@ const append = (data) => {
     data.forEach((el,i)=>{
         let count=1
         let tr =document.createElement("tr")
-
+        ////////////////////////////////////////////////////
         let img =document.createElement("img")
         img.src=el.image
-        // -------------------------------------------
+
         let name=document.createElement("p")
         name.innerText=el.name
+
         let description=document.createElement("p")
         description.innerText=el.description
+
         let size=document.createElement("p")
         size.innerText=`Size: ${el.size}`
+
         let remove=document.createElement("p")
         remove.innerText="Remove"
         remove.setAttribute("class","remove")
@@ -69,11 +54,12 @@ const append = (data) => {
         let des = document.createElement("div")
         des.setAttribute("id","des")
         des.append(name,description,size,remove)
-        // ---------------------------------------------
 
         let td1 = document.createElement("td")
-        td1.append(img,des)
         td1.setAttribute("id","td1")
+        td1.append(img,des)
+
+
 // *******************************************************
         let wrapper = document.createElement("div")
         wrapper.id="wrapper"
@@ -90,6 +76,7 @@ const append = (data) => {
         plus.innerText=" +";
 
         let td3 = document.createElement("td")
+        td3.className="td3"
         td3.innerText = `INR ${count*el.price}`
 
         
@@ -102,29 +89,43 @@ const append = (data) => {
             td3.innerText = `INR ${count*el.price}`
             TotalCartPrice+=el.price
             console.log('TotalCartPrice:', TotalCartPrice)
-            CARTvalue++;
-            itemCount.innerText=`[ ${CARTvalue} ]`;
-            cartt.innerText=CARTvalue
+            document.querySelector(".ItemSubtotal").innerText=`INR ${TotalCartPrice}.00`
+            document.querySelector(".EstimateTotal").innerText=`INR ${TotalCartPrice+99}.00`
+            TotalCartValue++;
+            itemCount.innerText=`[ ${TotalCartValue} ]`;
+            document.getElementById("cartvalue").innerText=TotalCartValue
+            localStorage.setItem("cartvalue",JSON.stringify(TotalCartValue))
+            localStorage.setItem("estimatedTotal",JSON.stringify(TotalCartPrice+99))
+            // cartvalue.innerText=TotalCartValue
             }
         })
 
         minus.onclick=()=>{
             if(count==1){
                 removeData(data,i)
-                CARTvalue--;
-                itemCount.innerText=`[ ${CARTvalue} ]`;
+
                 TotalCartPrice-=el.price
                 console.log('TotalCartPrice:', TotalCartPrice)
-                cartt.innerText=CARTvalue
+                document.querySelector(".ItemSubtotal").innerText=`INR ${TotalCartPrice}.00`
+                document.querySelector(".EstimateTotal").innerText=`INR ${TotalCartPrice+99}.00`
+                localStorage.setItem("cartvalue",JSON.stringify(TotalCartValue))
+                document.getElementById("cartvalue").innerText=TotalCartValue
+                localStorage.setItem("estimatedTotal",JSON.stringify(TotalCartPrice+99))
+                // cartvalue.innerText=TotalCartValue
             }else{
             count--;
             number.innerText=count
             td3.innerText = `INR ${count*el.price}`;
             TotalCartPrice-=el.price
             console.log('TotalCartPrice:', TotalCartPrice)
-            CARTvalue--;
-            itemCount.innerText=`[ ${CARTvalue} ]`;
-            cartt.innerText=CARTvalue
+            document.querySelector(".ItemSubtotal").innerText=`INR ${TotalCartPrice}.00`
+            document.querySelector(".EstimateTotal").innerText=`INR ${TotalCartPrice+99}.00`
+            TotalCartValue--;
+            itemCount.innerText=`[ ${TotalCartValue} ]`;
+            localStorage.setItem("cartvalue",JSON.stringify(TotalCartValue))
+            document.getElementById("cartvalue").innerText=TotalCartValue
+            localStorage.setItem("estimatedTotal",JSON.stringify(TotalCartPrice+99))
+            // cartvalue.innerText=TotalCartValue
             }
         }
 
@@ -144,6 +145,54 @@ function removeData(data,index){
     let NSData= data.filter((el,i)=>{
         return i!=index
     })
+    TotalCartValue--
+    itemCount.innerText=`[ ${TotalCartValue} ]`;
+    document.getElementById("cartvalue").innerText=TotalCartValue
+    localStorage.setItem("cartvalue",JSON.stringify(TotalCartValue))
     append(NSData)
-    // localStorage.setItem("cartData",JSON.stringify(NSData))
+    localStorage.setItem("cart",JSON.stringify(NSData))
+}
+
+document.querySelector(".ItemSubtotal").innerText=`INR ${TotalCartPrice}.00`
+document.querySelector(".EstimateTotal").innerText=`INR ${TotalCartPrice+99}.00`
+
+localStorage.setItem("estimatedTotal",JSON.stringify(TotalCartPrice+99))
+
+/////////////////////////////////////////////////////////////////////////////////
+let logstatus=localStorage.getItem("loggedInstatus")
+let accountt=document.getElementById("Myaccount")
+let bhasad=document.getElementById("bhasad")
+let logout=document.getElementById("Logout")
+let signinvbtn=document.getElementById("SIGNINCLICK");
+if(logstatus=="true"){
+    bhasad.style.width="14%"
+    accountt.innerText="My Account"
+    signinvbtn.innerText=null
+    signinvbtn.style.marginLeft="-30px"
+    logout.innerText="Logout"
+    logout.onclick  =()=>{
+        Logout()
+    }
+    logout.style.cursor="pointer"
+    accountt.style.cursor="pointer"
+}
+
+let Logout=()=>{
+    console.log("akjfahkjalhfsj")
+    let loggedInstatus=false;
+    localStorage.setItem('loggedInstatus',JSON.stringify(loggedInstatus));
+    bhasad.style.width="8%";
+    accountt.innerHTML=null;
+    logout.innerHTML=null;
+    signinvbtn.innerText="Sign In"
+}
+
+if(cartvalue==0){
+    document.querySelector(".Shipping").innerText=`INR 0.00`
+    document.querySelector(".EstimateTotal").innerText=`INR 0.00`;
+    let butttton=document.getElementById("checkoutBtn");
+    butttton.onclick=(event)=>{
+        alert("Your cart is empty! Please add items to your Cart");
+        event.preventDefault()
+    }  
 }

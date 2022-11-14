@@ -4,12 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="shortcut icon" type="image/png" href="/favicon.png">
+    <title>JCREW - Cart</title>
     <link rel="stylesheet" href="./styles/cart.css">
     <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="stylesheet" href="Sign-in.css">
+    <link rel="stylesheet" href="./styles/admin_login.css">  
+    <link
+    rel="stylesheet"
+    href="https://site-assets.fontawesome.com/releases/v6.1.1/css/all.css"
+    />
 </head>
 <body>
     <div id="navbar"></div>
+    <div class="overlay"></div>
+    <div class="sign-in-area"></div>
+    <div class="sign-Up-Area"></div>
+    <form class="admin-login"></form>
+    <div id="background"></div>
     <div id="quot">
         <p>Have a question? We can help.</p>
     </div>
@@ -18,7 +30,7 @@
             <div id="heading"><span>SHOPPING BAG </span> <span id="itemCount"></span></div>
             <div class="grayline"></div>
             <div id="cartItems">
-                <table>
+                <table class="table">
                     <thead>
                       <tr>
                         <th class="im">Image</th>
@@ -32,15 +44,32 @@
             </div>
         </div>
         <div id="checkout">
-            <!-- <p>Item Subtotal</p>
-            <p>Estimate Shipping</p>
-            <p>Estimate Total</p>
-            <button>CHECKOUT</button>
-            <button><img src="" alt=""></button> -->
+            <ul>
+                <li>
+                    <div>Item Subtotal</div>
+                    <div class="ItemSubtotal"></div>
+                </li>
+                <li>
+                    <div>Estimate Shipping <br></div>
+                    <div class="Shipping">INR 99.00</div>
+                </li>
+                <li>
+                    <div>Estimate Total</div>
+                    <div class="EstimateTotal"><span>INR</span></div>
+                </li>
+            </ul>
+            <a id="checkoutBtn" href="./checkout.html">
+                <button id="cartCheckout">CHECKOUT</button>
+            </a>
+            <p>Checkout with ESW</p>
+            <p>By clicking ‘Check Out Now’, you will be redirected to the ESW checkout page where payment will be taken and your order fulfilled by ESW, J.Crew's preferred partner for international sales.</p>
+            <div class="grayline"></div>
         </div>
     </div>
     <div id="footer"></div>
 </body>
 </html>
 <script type="module" src="./scripts/cart.js"></script>
-
+<script type="module" src="./Sign-in.js"></script>
+<script type="module" src="./Auth-Component/admin_login_component.js"></script>
+<script type="module" src="./scripts/admin_login.js"></script>

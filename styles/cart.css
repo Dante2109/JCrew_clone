@@ -1,7 +1,3 @@
-* {
-    padding: 0px;
-    margin: 0px;
-}
 body{
     background-color: rgb(245, 245, 245);
 }
@@ -26,13 +22,14 @@ body{
 }
 #quot {
     width: 100%;
-    height: 72px;
+    height: 65px;
     margin: auto;
     margin-top: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: white;
+    border-bottom: 1px solid rgb(202, 202, 202);
 }
 #quot > p {
     font-size: 12px;
@@ -49,30 +46,28 @@ body{
     background-color: rgb(245, 245, 245);
 }
 #cartProducts{
-    width: 65%;
+    width: 70%;
     margin-right: 10px;
     background-color: white;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
 }
 #heading{
-    color: rgb(119, 118, 118);
-    padding: 10px 5px;
+    font-family: "soleilBook";
+    color: rgb(0, 0, 0);
+    padding: 10px 10px;
     text-align: start;
 }
 .grayline{
     border-bottom: 1px solid rgb(202, 202, 202);
 }
 #checkout{
-    width: 35%;
-    border: 1px solid green;
+    width: 34%;
+    margin-left: 10px;
     height: 500px;
 }
 #cloumn, #column>div{
     display: flex;
     justify-content: space-between;
-}
-img{
-    width: 110px;
 }
 #td1{
     display: flex;
@@ -80,50 +75,107 @@ img{
     font-size: 14px;
 }
 #des{
-    font-family: "soleil";
-    margin: 10px;
+    font-family: "soleilregular";
+    font-size: 13px;
+    margin: 0px 10px;
     text-align: start;
 }
-th{
+#des p{
+    margin: 5px;
+    padding-right: 50px;
+}
+.table{
+    width: 100%;
+}
+.table th{
     text-align: start;
     border-bottom: 1px solid rgb(202, 202, 202);
-    padding: 2px 0px;
+    padding: 3px 0px;
     font-family: "soleil";
     font-size: 12px;
     color: rgb(97, 96, 96);
 }
-.nm{
+.table .im{
+    padding-left: 10px;
+    padding-right: 350px;
+}
+.table .nm{
     width: 100px;
     text-align: center;
-    background: rgba(0, 0, 0, 0);
 }
-.pr{
+.table .pr{
     width: 80px;
     text-align: center;
 }
-td{
+.table td{
     text-align: center;
     border-bottom: 1px solid rgb(202, 202, 202);
 }
-.remove{
+.table .td3{
+    font-size: 15px;
+}
+.table tr img{
+    width: 100px;
+    height: 110px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+#des .remove{
     text-decoration: underline;
     font-size: 12px;
-    margin-top: 30px;
+    margin-top: 20px;
     cursor: pointer;
 }
 #wrapper span{
-    border-bottom: 1px solid rgb(202, 202, 202);
+    border-bottom: 1px solid rgb(138, 138, 138);
     padding: 2px 5px;
 }
 .plus, .minus{
     cursor: pointer;
 }
 
+/* --------------------------// */
+#cartCheckout{
+    text-transform: uppercase;
+    width: 100%;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 700;
+    height: 40px;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    background: #000;
+}
 
-
-
-
-
-
-
-
+#checkout ul> li{
+    display: flex;
+    justify-content: space-between;
+    font-family: "soleilregular";
+    font-size: 12.5px;
+    margin: 5px 0px 12px -40px;
+}
+#checkout li>div{
+    margin-right: 1px;
+}
+.Shipping, .ItemSubtotal{
+    color: rgb(150, 3, 3);
+}
+.EstimateTotal{
+    font-size: 15px;
+}
+#checkoutBtn+p, #checkoutBtn+p+p{
+    text-align: start;
+}
+#checkoutBtn+p{
+    font-family: "soleilBook";
+    margin: 20px 0px 15px 0px;
+    font-size: 13px;
+    font-weight: 900;
+}
+#checkoutBtn+p+p{
+    font-family: "soleil";
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 500;
+    color: rgb(107, 107, 107);
+    margin-bottom: 25px;
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="checkout.css">
+    <link rel="shortcut icon" type="image/png" href="/favicon.png">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.1.1/css/all.css"/>
+    <title>ACRAS - Checkout</title>
+</head>
+<body>
+
+    <div id="cknav">
+        <h1><a href="index.html">J.CREW</a></h1>
+        <p>Checkout</p>
+    </div>
+    <div id="cksec1">
+        <div id="bx1">
+            <div id="bx1-1">
+                <h3>Delivery Method</h3>
+                <form>
+                <div id="radio1">
+                    <div id="rad1">
+                        <input type="radio" id="std" value="Standard Delivery" checked>
+                        <label for="std">STANDARD Delivery</label>
+                        <p>Delivered on or before 5 December</p>
+                    </div>
+                    <div id="rad2">
+                        <p>INR 1710.00</p>
+                    </div> 
+                </div>
+                <div id="radio2">
+                    <div id="rad1">
+                        <input type="radio" id="exp" value="Standard Delivery">
+                        <label for="exp">EXPRESS Delivery</label>
+                        <p>Delivered on or before 25 November</p>
+                    </div>
+                    <div id="rad2">
+                        <p>INR 2050.00</p>
+                    </div> 
+                </div>
+            </form>
+            </div>
+            <div id="bx1-2">
+                <div id="bx1-12">
+                    <h3>Delivery Address</h3>
+                    <div id="form1">
+                        <input type="text" placeholder="*First Name">
+                        <input type="text" placeholder="*Last Name">
+                    </div>
+                    <input type="text" placeholder="Address Line 1">
+                    <input type="text" placeholder="Address Line 2">
+                    <div id="form2">
+                        <input type="text" placeholder="*Postal Code">
+                        <input type="text" placeholder="*City">
+                    </div>
+                    <div id="form3">
+                        <input type="checkbox" id="chk">
+                        <label for="chk">Save this address for my next purchase</label>
+                    </div>
+                    <div id="form4">
+                        <div><img src="https://international.jcrew.com/assets/images/common/flags/img-IN.svg" alt=""></div>
+                        <input type="number" placeholder="Number">
+                    </div>
+                    <input type="email" placeholder="Email">
+                    <div id="form5">
+                        <div><img src="https://international.jcrew.com/assets/images/common/carbon_neutral.svg" alt=""></div>
+                        <p>Your order is 100% Carbon Neutral</p>
+                    </div>
+                    <div id="agr">
+                        <input type="checkbox" id="chk2">
+                        <div>
+                            <label for="chk2">I have read and consent to ESW processing my information in accordance with the Privacy Statement and Cookie Policy.</label>
+                        </div>
+                    </div>
+                    <button id="paybtn">Make Payment</button>
+                </div>
+            </div>
+        </div>
+        <div id="bx2">
+            <div id="pay1">
+                <button><a href="cart.html"> back to cart</a></button>
+            </div>
+            <div id="appendCart">
+            </div>
+            <div id="pay2">
+                <button><a href="index.html">view More</a></button>
+            </div>
+            <hr>
+            <div id="pay3">
+                <p>Items</p>
+                <p><span id="itemsCount"></span></p>
+            </div>
+            <div id="pay3">
+                <p>Delivery</p>
+                <p><span id="deliveryCount"></span></p>
+            </div>
+            <div id="pay4">
+                <p>Total</p>
+                <p><span id="totalCost"></span></p>
+            </div>
+        </div>
+    </div>
+    <div id="chkfot">
+        <div id="quickLinks">
+            <div>Powered by ESW</div>
+            <div>Terms & Conditions</div>
+            <div>Privacy Statement</div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script src="checkout.js"></script>

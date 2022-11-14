@@ -1,9 +1,52 @@
-// import { navbar,transitions } from "../Components/navbar.js";
+///////////////////////Navbar and footer export//////////////////////////////////
+import { navbar,transitions } from "../Components/navbar.js";
 
-// let navbar_div=document.getElementById("navbar");
-// navbar_div.innerHTML=navbar(),transitions()
+import footer from "../Components/footer.js"
+document.getElementById("footer").innerHTML = footer();
+let carttvaluee=localStorage.getItem("cartvalue") || 0;
+
+let navbar_div=document.getElementById("navbar");
+navbar_div.innerHTML=navbar()
+transitions()
 
 
+let footerinput=document.getElementById("footerinput").value
+let footerbutton=document.getElementById("footerbutton");
+footerbutton.addEventListener("click",function(){
+  alert("You are signed successfull for regular updates from J.Crew")
+})
+
+let logstatus=localStorage.getItem("loggedInstatus")
+let accountt=document.getElementById("Myaccount")
+let bhasad=document.getElementById("bhasad")
+let logout=document.getElementById("Logout")
+let signinvbtn=document.getElementById("SIGNINCLICK");
+if(logstatus=="true"){
+    bhasad.style.width="14%";
+    accountt.innerText="My Account";
+    signinvbtn.innerText=null;
+    signinvbtn.style.marginLeft="-30px";
+    logout.onclick=()=>{
+      Logout()
+    };
+    logout.innerText="Logout";
+    logout.style.cursor="pointer"
+    accountt.style.cursor="pointer"
+}
+
+let Logout=()=>{
+    console.log("akjfahkjalhfsj")
+    let loggedInstatus=false;
+    localStorage.setItem('loggedInstatus',JSON.stringify(loggedInstatus));
+    bhasad.style.width="8%";
+    accountt.innerHTML=null;
+    logout.innerHTML=null;
+    signinvbtn.innerText="Sign In"
+}
+
+
+
+//////////////////////Navbar and footer ended////////////////////////////////////
 
 var mensData = [
 
@@ -11,8 +54,8 @@ var mensData = [
       image:
         "https://www.jcrew.com/s7-img-facade/BJ706_YD2387?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=480&hei=480",
       
-        description:"NEW color",
-        name: "Secret Wash cotton poplin shirt",
+        name:"Shirt",
+        description: "Secret Wash cotton poplin shirt",
       price: 7699,
       type:"men"
       
@@ -20,24 +63,24 @@ var mensData = [
     {
       image:
         "https://www.jcrew.com/s7-img-facade/BJ705_WX4266?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=480&hei=480",
-        description:"NEW color",
-         name: "Secret Wash cotton poplin shirt",
+        name:"Checks Shirt",
+         description: "Secret Wash cotton poplin shirt",
         price: 9499,
         type:"men"
     },
     {
       image:
         "https://www.jcrew.com/s7-img-facade/BJ068_WZ2239_d2?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=540&hei=540",
-        description:"BEST SELLER",
-        name: "Nordic puffer vest with PrimaLoft",
+        name:"jacket",
+        description: "Nordic puffer vest with PrimaLoft",
         price: 7399,
         type:"men"
     },
     {
       image:
         "https://www.jcrew.com/s7-img-facade/BJ498_YD2283?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=480&hei=480",
-        description:"NEW color",
-        name: "Broken-in henley",
+        name:"New Shirt",
+        description: "Broken-in henley",
         price: 2699,
         type:"men"
 
@@ -45,8 +88,8 @@ var mensData = [
     {
       image:
         "https://www.jcrew.com/s7-img-facade/BF792_YD2123_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=540&hei=540",
-        description:"BEST SELLER",
-        name: "screct wash organic cotton shirt",
+        name:"Organic shirt",
+        description: "screct wash organic cotton shirt",
       price: 6440,
       type:"men"
     },
@@ -54,8 +97,8 @@ var mensData = [
       image:
         "https://www.jcrew.com/s7-img-facade/BJ446_YD0240?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=480&hei=480",
       
-        description:"NEW color",
-         name: "Brushed twill shirt ",
+        name:"Best Seller",
+         description: "Brushed twill shirt ",
        price: 10999,
        type:"men",
    
@@ -63,8 +106,8 @@ var mensData = [
     {
       image:
         "https://www.jcrew.com/s7-img-facade/BJ497_YD0222_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=540&hei=540",
-        description:"NEW color",
-       name: "Midweight fnnel work shirt",
+        name:"Fnnel shirt",
+       description: "Midweight fnnel work shirt",
       price: 7699,
       type:"men"
  
@@ -72,40 +115,40 @@ var mensData = [
     {
       image:
         "https://www.jcrew.com/s7-img-facade/BL160_YD2416_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=540&hei=540",
-        description:"NEW color",
-        name: "Cotton cashmere shirt",
+        name:"Shirt",
+        description: "Cotton cashmere shirt",
       price: 5299,
       type:"men"
     },
       {
         image:
           "https://www.jcrew.com/s7-img-facade/BB121_WX6913?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=480&hei=480",
-          description:"NEW color",
-          name: "Ludlow topcoat in wool-cahhmere",
+          name:"Coat",
+          description: "Ludlow topcoat in wool-cahhmere",
         price: 5299,
         type:"men"
       },
       {
         image:
           "https://www.jcrew.com/s7-img-facade/BJ274_HT1029?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=480&hei=480",
-          description:"NEW color",
-          name: "Broken-in henley",
+          name:"Sweater",
+          description: "Broken-in henley",
         price: 4299,
         type:"men"
       },
       {
         image:
           "https://www.jcrew.com/s7-img-facade/AQ431_WX8499?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=480&hei=480",
-          description:"NEW color",
-          name: "mens Broken-in henley",
+          name:"Jacket",
+          description: "mens Broken-in henley",
          price: 2699,
          type:"men"
       },
       {
         image:
           "https://www.jcrew.com/s7-img-facade/AZ972_SR0059_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=540&hei=540",
-          description:"NEW color",
-          name: "Cashmere cable-knit sweater",
+          name:"Sweater",
+          description: "Cashmere cable-knit sweater",
           
           price: 5299,
           type:"men"
@@ -113,8 +156,8 @@ var mensData = [
       {
         image:
           "https://www.jcrew.com/s7-img-facade/BL468_PP4057_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=540&hei=540",
-          description:"NEW color",
-          name: "Rugby shirt in stripe",
+          name:"sweater",
+          description: "Rugby shirt in stripe",
           
         price: 7299,
         type:"men"
@@ -122,8 +165,8 @@ var mensData = [
       {
         image:
           "https://www.jcrew.com/s7-img-facade/BJ326_GR5673_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=540&hei=540",
-          description:"NEW color",
-          name: "Heritage 14 oz. fleece sweatpant",
+          name:"Pant",
+          description: "Heritage 14 oz. fleece sweatpant",
           
         price: 9299,
         type:"men"
@@ -131,8 +174,8 @@ var mensData = [
       {
         image:
           "https://www.jcrew.com/s7-img-facade/BM633_PP3889_d1?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=540&hei=540",
-          description:"NEW color",
-          name: "Joshua Ellis for cashmere scarf",
+          name:"Scarf",
+          description: "Joshua Ellis for cashmere scarf",
           
         price: 9999,
         type:"men"
@@ -140,8 +183,8 @@ var mensData = [
       {
         image:
           "https://www.jcrew.com/s7-img-facade/BM156_YD2724?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=480&hei=480",
-          description:"NEW color",
-          name: "Sherpa-lined corduroy shirt-jacket",
+          name:"Jacket",
+          description: "Sherpa-lined corduroy shirt-jacket",
           
         price: 5299,
         type:"men"
@@ -149,48 +192,48 @@ var mensData = [
       {
         image:
           "https://www.jcrew.com/s7-img-facade/BM159_YD2595?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=540&hei=540",
-          description:"NEW color",
-          name: "Wool-blend Fair Isle workshirt",
+          name:"New shirt",
+          description: "Wool-blend Fair Isle workshirt",
           price: 7999,
           type:"men"
       },
       {
         image:
           "https://www.jcrew.com/s7-img-facade/J1851_WT0002?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=480&hei=480",
-          description:"NEW color",
-          name: "Ludlow Classic-fit cocktail jacket", 
+          name:"Classic T-shirt",
+          description: "Ludlow Classic-fit cocktail jacket", 
           price: 5299,
           type:"men"
       },
       {
         image:
           "https://www.jcrew.com/s7-img-facade/BK941_WZ2350_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=540&hei=540",
-          description:"NEW color",
-          name: " mixed tartan English wool",
+          name:"blazer",
+          description: " mixed tartan English wool",
           price: 5299,
           type:"men"
       },
       {
         image:
           "https://www.jcrew.com/s7-img-facade/BK216_RD6052?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=480&hei=480",
-          description:"NEW color",
-          name: "Heavyweight chamois workshirt",
+          name:"Shirt",
+          description: "Heavyweight chamois workshirt",
           price: 5299,
           type:"men"
       },
       {
         image:
           "https://www.jcrew.com/s7-img-facade/AD603_WZ2168_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=540&hei=540",
-          description:"NEW color",
-          name: "Nordic parka with PrimaLoft®",
+          name:"Jacket",
+          description: "Nordic parka with PrimaLoft®",
           price: 5299,
           type:"men"
       },
       {
         image:
           "https://www.jcrew.com/s7-img-facade/BM331_SR0249?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=480&hei=480",
-          description:"NEW color",
-          name: "Lambswool Fair Isle pom beanie",
+          name:"Beanie",
+          description: "Lambswool Fair Isle pom beanie",
           price: 5499,
           type:"men"
       },
@@ -201,7 +244,10 @@ var mensData = [
 
   let div=document.getElementById("SortbyPrice")
   div.addEventListener("change",sortbyprice)
+  let div2 =document.getElementById("SortbyName")
+  div2.addEventListener("change",namesort)
   display(mensData)
+
   
 
 
@@ -287,7 +333,11 @@ var mensData = [
       storeData(el.image,el.description,el.name,el.price,size_value);
       size_XS.style.fontWeight="400";
       size_XS.style.border="1px solid gray";
-      size_value=false
+      size_value=false;
+      carttvaluee++
+      localStorage.setItem("cartvalue",carttvaluee);
+      document.getElementById("cartvalue").innerText=carttvaluee
+
       }else{
         alert("Please Select the Size of the product")
       }
@@ -303,11 +353,11 @@ var mensData = [
   
   function storeData(productImg,name,special,price,sie_value){
    let obj={
-    productImg,
-    name,
-    special,
-    price,
-    sie_value,
+    image:productImg,
+    name:name,
+    description:special,
+    price:price,
+    size:sie_value,
    }
    let NSdata = JSON.parse(localStorage.getItem("cart")) || [];
    console.log(NSdata)
@@ -354,3 +404,7 @@ var mensData = [
       display(mensData)
      }
     }
+
+
+  
+    document.getElementById("cartvalue").innerText=carttvaluee

@@ -118,6 +118,11 @@ hr.grayline{
 #main{
     display: flex;
 }
+#selectMen, #selectWomen{
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
 #h4{
     font-family: "soleil";
     font-size: 20px;
@@ -151,7 +156,7 @@ hr.grayline{
 #section, #category{
     font-family: "soleilBook";
     width: 96%;
-    margin: 4px;
+    margin-left: 10px;
     height: 35px;
     border: none;
     color: gray;
@@ -171,21 +176,21 @@ hr.grayline{
 }
 /* *******************Table************************ */
 
-th{
+#table th{
     font-family: "soleil";
     font-size: 15px;
-    background-color: rgb(255, 175, 1);
-    padding: 10px 25px;
+    background-color: rgb(255, 179, 0);
+    padding: 8px 37px;
 }
 .big{
     width: 200px;
 }
-td{
+#table td{
     font-family: "soleilregular";
     font-size: 13px;
     text-align: center;
 }
-table{
+#table {
     margin: auto;
     margin: 60px 10px 0px 325px;
 }
@@ -197,12 +202,14 @@ table{
     padding: 10px;
     margin: 20px 0px 0px 100px;
 }
-tr img{
+#table tr img{
     width: 100px;
-    height: 120px;
+    height: 110px;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
-.red{
+
+
+.reed{
     color: red;
     background-color: rgb(255, 236, 236);
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;

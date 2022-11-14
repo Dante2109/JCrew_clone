@@ -211,3 +211,32 @@ font-size: 14px;
   font-family: "soleil";
   font-size: 14px;
 }
+#sec12 { 
+  border: 1px solid #e1e1e1;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+}
+
+#scIcons { 
+  height: 35px;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#scIcons > div { 
+  width: 16%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;  
+}
+
+#scIcons > div > p {
+  font-family: sans-serif;
+  font-size: 13px;
+  line-height: 26px;
+  color: #000000;
+  font-weight: 500;
+}

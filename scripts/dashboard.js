@@ -29,7 +29,7 @@ const append = (data) => {
         
         let td6 = document.createElement("td")
         td6.innerText = "Remove"
-        td6.setAttribute("class","red")
+        td6.setAttribute("class","reed")
         td6.addEventListener("click",()=>{
             removeData(data,i,el.type)
         })
@@ -67,6 +67,8 @@ function updateData(data,i,type){
 
 let addProduct = document.getElementById("add_product")
 addProduct.onclick = () => {
+    menData = JSON.parse(localStorage.getItem("men")) || []
+    womenData = JSON.parse(localStorage.getItem("women")) || []
 
     let image = document.getElementById("image").value
     let name = document.getElementById("name").value
@@ -98,12 +100,12 @@ addProduct.onclick = () => {
         append(womenData)
     }    
 }    
-let mData = JSON.parse(localStorage.getItem("men")) || []
-let wData = JSON.parse(localStorage.getItem("women")) || []
 let selectMen = document.getElementById("selectMen").onclick=()=>{
+    let mData = JSON.parse(localStorage.getItem("men")) || []
     append(mData)
 }
 
 let selectWomen = document.getElementById("selectWomen").onclick=()=>{
+    let wData = JSON.parse(localStorage.getItem("women")) || []
     append(wData)
 }
