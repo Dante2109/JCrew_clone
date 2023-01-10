@@ -5,7 +5,7 @@
 ### About
 <br>
 <p>
-This repository containes the complete files of a simple working of an E-Commerce website. This is out Construct Week Project and the assigned website for our group was JCREW - an international clothing brand. This project uses HTML, CSS, Javascript to shocase the functioning of an E-Commerce website. The maain objective of the project was to make the user have an easier experience shopping and maintain the claen design.</p>
+This repository containes the complete files of a simple working of an E-Commerce website. This is our Construct Week Project and the assigned website for our group was JCREW - an international clothing brand. This project uses HTML, CSS, Javascript to shocase the functioning of an E-Commerce website. The maain objective of the project was to make the user have an easier experience shopping and maintain the claen design.</p>
 <p>
 This features of this project are : 
     <ul>
